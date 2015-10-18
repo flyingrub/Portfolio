@@ -30,16 +30,3 @@ $dark-color: #121212;
 	@include border-radius(2px);
 	@include box-shadow( 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23));
 }
-
-@mixin element {
-	position: absolute;
-}
-
-@mixin circle {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border-width: 1px;
-    border-style: solid;
-    border-color: white;
-}
