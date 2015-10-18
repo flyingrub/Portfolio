@@ -1,0 +1,45 @@
+$white-color: #ffffff;
+$dark-color: #121212;
+
+@import "compass/reset";
+@import "compass/utilities";
+@import "compass/css3";
+@import "compass/layout/stretching";
+@import "compass/layout.scss";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Lato|Montserrat|Catamaran);
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@mixin white-on-black {
+    color: $white-color;
+    background: $dark-color;
+}
+
+@mixin black-on-white {
+    color: $dark-color;
+    background: $white-color;
+}
+
+@mixin card {
+	@include border-radius(2px);
+	@include box-shadow( 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23));
+}
+
+@mixin element {
+	position: absolute;
+}
+
+@mixin circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+}
