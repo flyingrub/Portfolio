@@ -22,7 +22,7 @@ header {
 	div {
 		@include inline-block(middle);
 		@include float-right;
-		font-family: "Open Sans";
+		font-family: "Roboto";
 		font-size: 20px;
 		cursor: pointer;
 		@include vertical-align;
@@ -32,7 +32,7 @@ header {
 		@include float-left;
 		font-size: 40px;
 		margin-left: $margin-header;
-		font-family: "Muli";
+		font-family: "Times New Roman";
 	}
 
 	#about {
@@ -55,17 +55,17 @@ main {
 	position: absolute;
 	top: 100px;
 	bottom: 70px;
-	overflow: hidden;
+	overflow-y: hidden;
 	color: white;
 
-	section {
-		padding-right: 20%;
-		padding-left: 20%;
+	.section {
+		padding-right: 25%;
+		padding-left: 25%;
 	}
 	
 	#title {
 		font-weight: bold;
-		font-family: "Catamaran";
+		font-family: "Raleway";
 		font-size: 60px;
 		margin-top: 50px;
 		h3 {
@@ -75,18 +75,35 @@ main {
 
 	#content {
 		font-family: "Open Sans";
-		font-size: 25px;
+		font-size: 23px;
 		text-align: justify;
 		text-justify: inter-word;
 		line-height: 1.5em;
 	}
 
 	hr {
+		border-top: 1px;
+		border-bottom: 1px;
+		height: 2px;
+		background-color: lighten($dark-color, 10%);
 		margin-top: 50px;
 		margin-bottom: 50px;
-		background-color: #f0f0f0;
 		margin-right: 15%;
 		margin-left: 15%;
+	}
+
+	// ABOUT 
+
+	#about {
+		font-size: 23px;
+		text-align: justify;
+		text-justify: inter-word;
+		line-height: 1.5em;
+	}
+
+	#link {
+		float: right;
+    	width: 300px;
 	}
 
 
