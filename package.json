@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "0.1.1",
+  "description": "flyingrub's portfolio.",
+  "main": "index.js",
+  "private": "true",
+  "dependencies": {
+    "vue": "^0.12.16"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flyingrub/Portfolio.git"
+  },
+  "author": "flyingrub",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/flyingrub/Portfolio/issues"
+  },
+  "homepage": "https://github.com/flyingrub/Portfolio#readme"
+}

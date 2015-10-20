@@ -4,41 +4,49 @@
 	<meta charset="utf-8">
 	<title>Ronan</title>
 	<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> 
-	<script src="script.js"></script>
+	<script src="node_modules/vue/dist/vue.min.js"></script>
+	
 </head>
 <body>
-	<header>
+	<header id="header">
 		<div id="logo">RONAN</div>
-		<div id="projects">PROJECTS</div>
-		<div id="about">ABOUT</div>
+		<div v-on="click: goTo(1)" id="projects">PROJECTS</div>
+		<div v-on="click: goTo(0)" id="about">ABOUT</div>
 	</header>
-	<main class ="card">
-		<section class="section" id="title">
-			<h3>TAMTIME</h3>
-		</section>
-		<hr/>
-		<section class="section" id="content">
-			<p>His cognitis Gallus ut serpens adpetitus telo vel saxo iamque spes extremas.</br></br>Cum saepe multa, tum memini domi in hemicyclio sedentem, ut solebat, cum et ego essem una et pauci admodum familiares, in eum sermonem illum incidere qui tum forte multis erat in ore. Meministi enim profecto, Attice, et eo magis, quod P. Miratio vel querella.</br></br>Martinus agens illas provincias pro praefectis aerumnas innocentium graviter gemens saepeque obsecrans, ut ab omni culpa inmunibus parceretur, cum non inpetraret.</p>
-		</section>
-	</main>
-	<footer>
-		<ul>
-			<li>
-				<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-				<circle cx="10" cy="10" r="2" fill="white" style="stroke:white;stroke-width:1" />
-				</svg>
-			</li>
-			<li>
-				<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-				<circle cx="10" cy="10" r="2" fill="none" style="stroke:white;stroke-width:1" />
-				</svg>
-			</li>
-			<li>
-				<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-				<circle cx="10" cy="10" r="2" fill="none" style="stroke:white;stroke-width:1" />
+	<div id="all-frames" v-style="width: allFramesWidth + '%', transform: 'translate('+pos+'px,0px)'">
+		<main v-style="width: oneCardWidth + '%'" class="card">
+			<section id="about">
+				<p>Hi ! I am Ronan Nello, a french student in IT.</br></br>I love creating and learning new things. And as you can see a lot of them are Free Software on Github. I am also interested in design and UX. I like music and abstract (mostly minimalistic) art.</br></br>You can find me on the followings websites.</p>
+			</section>
+			<div class="vr"></div>
+			<section id="link">
+				<ul>
+					<li><a href="https://github.com/flyingrub">GITHUB</a></li>
+					<li><a href="https://soundcloud.com/flyingrub">SOUNDCLOUD</a></li>
+					<li><a href="https://fr.linkedin.com/pub/ronan-timinello/b4/482/973">LINKEDIN</a></li>
+					<li><a href="https://twitter.com/burgniylf">TWITTER</a></li>
+				</ul>
+			</section>
+		</main>
+	    <main v-style="width: oneCardWidth + '%'" class ="card" v-repeat="projects">
+	        <section class="section" id="title">
+	            <h3>{{title}}</h3>
+	        </section>
+	        <hr/>
+	        <section class="section" id="content">
+	            <p>{{{content}}}</p>
+	        </section>
+	    </main>
+	</div>
+	<footer id="footer">
+		<ul v-style="width: px + 'px'">
+			<li v-on="click: goTo($index)" v-repeat="size">
+				<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="15" cy="15" r="3" fill="white" style="stroke:white;stroke-width:1" />
 				</svg>
 			</li>
 		</ul>
 	</footer>
 </body>
+<script src="main.js"></script>
 </html>
