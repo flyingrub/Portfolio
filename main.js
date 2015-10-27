@@ -3,24 +3,6 @@ var currentCard = 0;
 var oldScroll = new Date();
 var canScroll = true;
 
-
-window.onresize = function(event) {
-	w = window.innerWidth;
-	goToThisCard(currentCard);
-};
-
-window.onwheel = function (e) {
-	if (canScroll && new Date() > oldScroll) {
-		if (e.deltaY > 0) {
-			goToThisCard(currentCard+1);
-		} else {
-			goToThisCard(currentCard-1);
-		}
-		oldScroll = new Date();
-		oldScroll.setMilliseconds(oldScroll.getMilliseconds() + 500);
-	}
-}
-
 // SETUP DATA 
 var Data = {
 	projects: [
@@ -96,5 +78,38 @@ for(var i=0;i<classname.length;i++){
     classname[i].addEventListener('mouseover', onMouseOver, false);
     classname[i].addEventListener('mouseout', onMouseOut, false);
 }
+
+window.onresize = function(event) {
+	w = window.innerWidth;
+	goToThisCard(currentCard);
+};
+
+window.onwheel = function (e) {
+	if (canScroll && new Date() > oldScroll) {
+		if (e.deltaY > 0) {
+			goToThisCard(currentCard+1);
+		} else {
+			goToThisCard(currentCard-1);
+		}
+		oldScroll = new Date();
+		oldScroll.setMilliseconds(oldScroll.getMilliseconds() + 500);
+	}
+}
+
+window.onkeydown = function(evt) {
+    evt = evt || window.event;
+    var keyCode = evt.keyCode;
+    if (keyCode == 37) {
+    	goToThisCard(currentCard -1);
+    	evt.preventDefault()
+    }
+    if (keyCode == 39) {
+    	goToThisCard(currentCard +1);
+    	evt.preventDefault()
+    }
+    if (keyCode <= 38 && keyCode >= 40) {
+        return false;
+    }
+};
 
 

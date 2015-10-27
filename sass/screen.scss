@@ -11,7 +11,8 @@ $footer-height: 70px;
 $link-width: 500px;
 
 html, body {
-	background-image: url("test.png");
+	//background-image: url("test.png");
+	background-color: black;
 	height: 100%;
 	overflow: hidden;
 }
@@ -86,7 +87,7 @@ header {
 
 .card {
 	@include black-on-white;
-	@include card;
+	//@include card;
 	overflow-y: auto;
 }
 
