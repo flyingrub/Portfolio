@@ -1,7 +1,7 @@
 var w = window.innerWidth;
 var currentCard = 0;
 var oldScroll = new Date();
-var mainAboutHover = false;
+var canScroll = false;
 
 
 window.onresize = function(event) {
@@ -10,10 +10,7 @@ window.onresize = function(event) {
 };
 
 window.onwheel = function (e) {
-	if (mainAboutHover) {
-		return;
-	}
-	if (new Date() > oldScroll) {
+	if (canScroll && new Date() > oldScroll) {
 		if (e.deltaY > 0) {
 			goToThisCard(currentCard+1);
 		} else {
@@ -22,16 +19,6 @@ window.onwheel = function (e) {
 		oldScroll = new Date();
 		oldScroll.setMilliseconds(oldScroll.getMilliseconds() + 500);
 	}
-}
-
-document.getElementById('main-about').onmouseover = function () {
-    mainAboutHover = true;
-    console.log(mainAboutHover);
-}
-
-document.getElementById('main-about').onmouseout = function () {
-    mainAboutHover = false;
-    console.log(mainAboutHover);
 }
 
 // SETUP DATA 
@@ -55,9 +42,6 @@ var Data = {
 Data.numberOfCard = Data.projects.length +1;
 Data.allFramesWidth = 100 * Data.numberOfCard
 Data.oneCardWidth = 100 / Data.numberOfCard
-
-console.log(Data.numberOfCard)
-
 
 var footerData = {
 	size: Data.numberOfCard,
@@ -95,5 +79,22 @@ var header = new Vue({
 	}
 })
 
+// Listener
+
+var classname = document.getElementsByClassName("card");
+
+var onMouseOver = function() {
+	hasScrollBar = this.scrollHeight!=this.clientHeight
+    canScroll = !hasScrollBar;
+};
+
+var onMouseOut = function() {
+    canScroll = true;
+};
+
+for(var i=0;i<classname.length;i++){
+    classname[i].addEventListener('mouseover', onMouseOver, false);
+    classname[i].addEventListener('mouseout', onMouseOut, false);
+}
 
 
