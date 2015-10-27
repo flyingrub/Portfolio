@@ -12,7 +12,7 @@ $link-width: 500px;
 
 html, body {
 	//background-image: url("test.png");
-	background-color: black;
+	background-color: #101010;
 	height: 100%;
 	overflow: hidden;
 }
@@ -86,8 +86,9 @@ header {
 }
 
 .card {
-	@include black-on-white;
-	//@include card;
+	@include white-on-black;
+	//@include black-on-white;
+	@include card;
 	overflow-y: auto;
 }
 
@@ -220,7 +221,7 @@ main {
 		box-sizing: border-box;
 		padding: 5em;
 		font-family: "Open Sans";
-		font-size: 28px;
+		font-size: 26px;
 		text-align: justify;
 		text-justify: inter-word;
 		line-height: 1.5em;
@@ -229,17 +230,17 @@ main {
 		}
 
 		@media screen and (max-width: 1750px), screen and (max-height: 850px) {
-			font-size: 26px;
+			font-size: 24px;
 			padding: 4em;
 		}
 
 		@media screen and (max-width: 1150px), screen and (max-height: 750px) {
-			font-size: 25px;
+			font-size: 23px;
 			padding: 2em;
 		}
 
 		@media screen and (max-width: 1000px), screen and (max-height: 600px) {
-			font-size: 24px;
+			font-size: 22px;
 			line-height: 1.4em;
 		}
 	}
@@ -248,7 +249,7 @@ main {
 		@include flex(1 0);
 		max-width: 2px;
 		height: 500px;
-		background-color: $dark-color;
+		background-color: darken($white-color, 25%);
 
 		@media screen and (max-width: 850px), screen and (max-height: 650px) {
 			display: none;

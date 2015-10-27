@@ -12,11 +12,11 @@ var Data = {
 		},
 		{
 			title: 'ALEA', 
-			content: 'john@doh.com' 
+			content: 'His cognitis Gallus ut serpens adpetitus telo vel saxo iamque spes extremas.</br></br>Cum saepe multa, tum memini domi in hemicyclio sedentem, ut solebat, cum et ego essem una et pauci admodum familiares, in eum sermonem illum incidere qui tum forte multis erat in ore. Meministi enim profecto, Attice, et eo magis, quod P. Miratio vel querella.</br></br>Martinus agens illas provincias pro praefectis aerumnas innocentium graviter gemens saepeque obsecrans, ut ab omni culpa inmunibus parceretur, cum non inpetraret.</p>' 
 		},
 		{
 			title: 'SECURE KEY', 
-			content: 'john@doh.com' 
+			content: 'His cognitis Gallus ut serpens adpetitus telo vel saxo iamque spes extremas.</br></br>Cum saepe multa, tum memini domi in hemicyclio sedentem, ut solebat, cum et ego essem una et pauci admodum familiares, in eum sermonem illum incidere qui tum forte multis erat in ore. Meministi enim profecto, Attice, et eo magis, quod P. Miratio vel querella.</br></br>Martinus agens illas provincias pro praefectis aerumnas innocentium graviter gemens saepeque obsecrans, ut ab omni culpa inmunibus parceretur, cum non inpetraret.</p>' 
 		}
 	],
 	pos: 0
@@ -111,5 +111,11 @@ window.onkeydown = function(evt) {
         return false;
     }
 };
+
+// Particle
+
+particlesJS.load('particles-js', 'node_modules/particles/particlesjs-config.json', function() {
+  console.log('callback - particles.js config loaded');
+});
 
 

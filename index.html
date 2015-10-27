@@ -7,9 +7,9 @@
 	<title>Ronan</title>
 	<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> 
 	<script src="node_modules/vue/dist/vue.min.js"></script>
-	
+	<script src="node_modules/particles/particles.min.js"></script>
 </head>
-<body>
+<body id="particles-js">
 	<header id="header">
 		<div v-on="click: goTo(0)" id="logo">RONAN</div>
 		<div v-on="click: goTo(1)" id="projects">PROJECTS</div>
@@ -18,7 +18,7 @@
 	<div id="all-frames" v-style="width: allFramesWidth + '%', transform: 'translate('+pos+'px,0px)'">
 		<main id="main-about" v-style="width: oneCardWidth + '%'" class="card about">
 			<section id="about">
-				<p>Hi ! I am Ronan, a french student in IT.</br></br>I love creating and learning new things. And as you can see a lot of them are Free Software on Github. I am also interested in design and UX. I like music and abstract (mostly minimalistic) art.</br></br>You can find me on the followings websites. Or learn more about some of my projects on this website.</p>
+				<p>Hi ! I am Ronan, a french student in IT.</br></br>I love creating and learning new things. And as you can see a lot of them are Free Software and available on my Github. I am also interested in design and UX.</br>I like music and abstract (mostly minimalistic) art.</br></br>You can find me on the followings websites. Or learn more about some of my projects on this website.</p>
 			</section>
 			<div class="vr"></div>
 			<section id="link">

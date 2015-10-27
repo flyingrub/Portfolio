@@ -1,4 +1,4 @@
-$white-color: #ffffff;
+$white-color: #e0e0e0;
 $dark-color: #121212;
 
 @import "compass/reset";
@@ -38,8 +38,8 @@ $dark-color: #121212;
 	}
 }
 @mixin white-on-black {
-	color: white;
-	background: rgba(0, 0, 0, 0.4);
+	color: $white-color;
+	background: rgba(0, 0, 0, 0.70);
 }
 
 @mixin black-on-white {
