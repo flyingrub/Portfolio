@@ -5,9 +5,10 @@
 
 @import "base";
 
-$margin-header: 200px;
+$margin-header: 300px;
 $header-height: 100px;
 $footer-height: 70px;
+$link-width: 500px;
 
 html, body {
 	background-image: url("test.png");
@@ -36,29 +37,69 @@ header {
 		font-size: 40px;
 		margin-left: $margin-header;
 		font-family: "Playfair Display";
+
+		@media screen and (max-width: 1600px) {
+			margin-left: $margin-header /2;
+		}
+
+		@media screen and (max-width: 1400px) {
+			margin-left: $margin-header /3;
+		}
+
+		@media screen and (max-width: 1200px) {
+			margin-left: $margin-header /4;
+		}
+
+		@media screen and (max-width: 700px) {
+			margin-left: $margin-header /8;
+		}
 	}
 
 	#about {
 		margin-right: 2em;
+
+		@media screen and (max-width: 500px) {
+			display: none;
+		}
 	}
 
 	#projects {
 		margin-right: $margin-header;
+
+		@media screen and (max-width: 1600px) {
+			margin-right: $margin-header /2;
+		}
+
+		@media screen and (max-width: 1400px) {
+			margin-right: $margin-header /3;
+		}
+
+		@media screen and (max-width: 1200px) {
+			margin-right: $margin-header /4;
+		}
+
+		@media screen and (max-width: 700px) {
+			margin-right: $margin-header /8;
+		}
 	}
 }
 
 .card {
 	@include black-on-white;
 	@include card;
+	overflow-y: auto;
 }
 
 .about {
-	margin-top: 60px;
-	@include white-on-black;
-	height: 550px;
-	border-style: solid;
-    border-width: 1px;
-    border-color: white;
+	@include display-flex;
+	@include flex-wrap(wrap);
+	@include flex-direction(row);
+	align-items: center;
+
+	@media screen and (max-width: 850px), screen and (max-height: 650px) {
+		display: block;
+		overflow-x: hidden;
+	}
 }
 
 #all-frames {
@@ -78,6 +119,26 @@ main {
 	margin-right: $margin-header;
 	margin-left: $margin-header;
 	color: white;
+
+	@media screen and (max-width: 1600px) {
+		margin-right: $margin-header /2;
+		margin-left: $margin-header /2;
+	}
+
+	@media screen and (max-width: 1400px) {
+		margin-right: $margin-header /3;
+		margin-left: $margin-header /3;
+	}
+
+	@media screen and (max-width: 1200px) {
+		margin-right: $margin-header /4;
+		margin-left: $margin-header /4;
+	}
+
+	@media screen and (max-width: 700px) {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
 
 	.section {
 		padding-right: 25%;
@@ -114,35 +175,53 @@ main {
 	// ABOUT
 
 	#about {
+		@include flex(1 0);
 		height: 100%;
 		box-sizing: border-box;
 		padding: 5em;
-		@include float-left;
-		font-family: "Playfair Display";
+		font-family: "Open Sans";
 		font-size: 28px;
 		text-align: justify;
 		text-justify: inter-word;
 		line-height: 1.5em;
-		@include calc(width, "100% - 400px");
 		p {
 			@include vertical-align;
+		}
+
+		@media screen and (max-width: 1650px), screen and (max-height: 700px) {
+			font-size: 26px;
+			padding: 4em;
+		}
+
+		@media screen and (max-width: 1100px), screen and (max-height: 650px) {
+			font-size: 25px;
+			padding: 2em;
+		}
+
+		@media screen and (max-width: 1000px), screen and (max-height: 600px) {
+			font-size: 24px;
+			line-height: 1.4em;
 		}
 	}
 
 	.vr {
-		width: 2px;
-		background-color: $dark-color;
+		@include flex(1 0);
+		max-width: 2px;
 		height: 500px;
-		@include inline-block(middle);
+		background-color: $dark-color;
+
+		@media screen and (max-width: 850px), screen and (max-height: 650px) {
+			display: none;
+		}
 	}
 
 	#link {
+		@include flex(1 0);
 		height: 100%;
 		text-align: center;
 		box-sizing: border-box;
-		width: 390px;
+		max-width: $link-width;
 		font-family: "Playfair Display";
-		@include inline-block(middle);
 		font-size: 30px;
 		line-height: 2em;
 
@@ -158,6 +237,23 @@ main {
 		a:hover {
 			@include strikeout;
 		}
+
+		@media screen and (max-width: 1400px) {
+			max-width: $link-width / 1.25;
+		}
+
+		@media screen and (max-width: 1000px) {
+			max-width: $link-width / 1.5;
+		}
+
+		@media screen and (max-width: 1000px) {
+			max-width: none;
+		}
+
+		@media screen and (max-width: 850px), screen and (max-height: 650px) {
+			max-width: none;
+			width: 100%;
+		}
 	}
 }
 
@@ -167,6 +263,11 @@ footer {
 	bottom: 0px;
 	right: 0px;
 	width: 100%;
+
+	.selected {
+		fill: white;
+	}
+
 	ul {
 		margin: auto;
 		height: 100%;

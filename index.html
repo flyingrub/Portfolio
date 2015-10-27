@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Ronan</title>
 	<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> 
 	<script src="node_modules/vue/dist/vue.min.js"></script>
@@ -9,22 +10,22 @@
 </head>
 <body>
 	<header id="header">
-		<div id="logo">RONAN</div>
+		<div v-on="click: goTo(0)" id="logo">RONAN</div>
 		<div v-on="click: goTo(1)" id="projects">PROJECTS</div>
 		<div v-on="click: goTo(0)" id="about">ABOUT</div>
 	</header>
 	<div id="all-frames" v-style="width: allFramesWidth + '%', transform: 'translate('+pos+'px,0px)'">
-		<main v-style="width: oneCardWidth + '%'" class="card">
+		<main id="main-about" v-style="width: oneCardWidth + '%'" class="card about">
 			<section id="about">
-				<p>Hi ! I am Ronan Nello, a french student in IT.</br></br>I love creating and learning new things. And as you can see a lot of them are Free Software on Github. I am also interested in design and UX. I like music and abstract (mostly minimalistic) art.</br></br>You can find me on the followings websites.</p>
+				<p>Hi ! I am Ronan Nello, a french student in IT.</br></br>I love creating and learning new things. And as you can see a lot of them are Free Software on Github. I am also interested in design and UX. I like music and abstract (mostly minimalistic) art.</br></br>You can find me on the followings websites. Or learn more about some of my projects on this website.</p>
 			</section>
 			<div class="vr"></div>
 			<section id="link">
 				<ul>
-					<li><a href="https://github.com/flyingrub">GITHUB</a></li>
-					<li><a href="https://soundcloud.com/flyingrub">SOUNDCLOUD</a></li>
-					<li><a href="https://fr.linkedin.com/pub/ronan-timinello/b4/482/973">LINKEDIN</a></li>
-					<li><a href="https://twitter.com/burgniylf">TWITTER</a></li>
+					<li><a target="_blank" href="https://github.com/flyingrub">GITHUB</a></li>
+					<li><a target="_blank" href="https://soundcloud.com/flyingrub">SOUNDCLOUD</a></li>
+					<li><a target="_blank" href="https://fr.linkedin.com/pub/ronan-timinello/b4/482/973">LINKEDIN</a></li>
+					<li><a target="_blank" href="https://twitter.com/burgniylf">TWITTER</a></li>
 				</ul>
 			</section>
 		</main>
@@ -42,7 +43,7 @@
 		<ul v-style="width: px + 'px'">
 			<li v-on="click: goTo($index)" v-repeat="size">
 				<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-				<circle cx="15" cy="15" r="3" fill="white" style="stroke:white;stroke-width:1" />
+				<circle class="{{ current == $index ? 'selected' : ''}}" cx="15" cy="15" r="3" fill="none" style="stroke:white;stroke-width:1" />
 				</svg>
 			</li>
 		</ul>
