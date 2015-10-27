@@ -1,7 +1,7 @@
 var w = window.innerWidth;
 var currentCard = 0;
 var oldScroll = new Date();
-var canScroll = false;
+var canScroll = true;
 
 
 window.onresize = function(event) {

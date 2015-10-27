@@ -108,7 +108,7 @@ header #logo {
   margin-left: 300px;
   font-family: "Playfair Display";
 }
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1650px) {
   /* line 35, ../sass/screen.scss */
   header #logo {
     margin-left: 150px;
@@ -146,7 +146,7 @@ header #about {
 header #projects {
   margin-right: 300px;
 }
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1650px) {
   /* line 66, ../sass/screen.scss */
   header #projects {
     margin-right: 150px;
@@ -225,7 +225,7 @@ main {
   margin-left: 300px;
   color: white;
 }
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1650px) {
   /* line 115, ../sass/screen.scss */
   main {
     margin-right: 150px;
@@ -258,18 +258,44 @@ main .section {
   padding-right: 25%;
   padding-left: 25%;
 }
-/* line 148, ../sass/screen.scss */
+@media screen and (max-width: 1200px), screen and (max-height: 700px) {
+  /* line 143, ../sass/screen.scss */
+  main .section {
+    padding-right: 20%;
+    padding-left: 20%;
+  }
+}
+@media screen and (max-width: 700px), screen and (max-height: 650px) {
+  /* line 143, ../sass/screen.scss */
+  main .section {
+    padding-right: 15%;
+    padding-left: 15%;
+  }
+}
+/* line 158, ../sass/screen.scss */
 main #title {
   font-weight: bold;
   font-family: "Raleway";
-  font-size: 60px;
   margin-top: 50px;
 }
-/* line 153, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 main #title h3 {
+  font-size: 60px;
   text-align: center;
 }
-/* line 158, ../sass/screen.scss */
+@media screen and (max-width: 1000px) {
+  /* line 163, ../sass/screen.scss */
+  main #title h3 {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 700px) {
+  /* line 163, ../sass/screen.scss */
+  main #title h3 {
+    font-size: 45px;
+  }
+}
+/* line 179, ../sass/screen.scss */
 main #content {
   font-family: "Open Sans";
   font-size: 23px;
@@ -277,7 +303,26 @@ main #content {
   text-justify: inter-word;
   line-height: 1.5em;
 }
-/* line 166, ../sass/screen.scss */
+@media screen and (max-width: 1650px) {
+  /* line 179, ../sass/screen.scss */
+  main #content {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  /* line 179, ../sass/screen.scss */
+  main #content {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  /* line 179, ../sass/screen.scss */
+  main #content {
+    font-size: 24px;
+    line-height: 1.4em;
+  }
+}
+/* line 200, ../sass/screen.scss */
 main hr {
   height: 2px;
   background-color: #2c2c2c;
@@ -286,7 +331,14 @@ main hr {
   margin-right: 15%;
   margin-left: 15%;
 }
-/* line 177, ../sass/screen.scss */
+@media screen and (max-width: 1100px), screen and (max-height: 650px) {
+  /* line 200, ../sass/screen.scss */
+  main hr {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+}
+/* line 216, ../sass/screen.scss */
 main #about {
   -webkit-flex: 1 0;
   flex: 1 0;
@@ -299,7 +351,7 @@ main #about {
   text-justify: inter-word;
   line-height: 1.5em;
 }
-/* line 187, ../sass/screen.scss */
+/* line 226, ../sass/screen.scss */
 main #about p {
   position: relative;
   top: 50%;
@@ -307,28 +359,28 @@ main #about p {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-@media screen and (max-width: 1650px), screen and (max-height: 700px) {
-  /* line 177, ../sass/screen.scss */
+@media screen and (max-width: 1750px), screen and (max-height: 850px) {
+  /* line 216, ../sass/screen.scss */
   main #about {
     font-size: 26px;
     padding: 4em;
   }
 }
-@media screen and (max-width: 1100px), screen and (max-height: 650px) {
-  /* line 177, ../sass/screen.scss */
+@media screen and (max-width: 1150px), screen and (max-height: 750px) {
+  /* line 216, ../sass/screen.scss */
   main #about {
     font-size: 25px;
     padding: 2em;
   }
 }
 @media screen and (max-width: 1000px), screen and (max-height: 600px) {
-  /* line 177, ../sass/screen.scss */
+  /* line 216, ../sass/screen.scss */
   main #about {
     font-size: 24px;
     line-height: 1.4em;
   }
 }
-/* line 207, ../sass/screen.scss */
+/* line 246, ../sass/screen.scss */
 main .vr {
   -webkit-flex: 1 0;
   flex: 1 0;
@@ -337,12 +389,12 @@ main .vr {
   background-color: #121212;
 }
 @media screen and (max-width: 850px), screen and (max-height: 650px) {
-  /* line 207, ../sass/screen.scss */
+  /* line 246, ../sass/screen.scss */
   main .vr {
     display: none;
   }
 }
-/* line 218, ../sass/screen.scss */
+/* line 257, ../sass/screen.scss */
 main #link {
   -webkit-flex: 1 0;
   flex: 1 0;
@@ -354,7 +406,7 @@ main #link {
   font-size: 30px;
   line-height: 2em;
 }
-/* line 228, ../sass/screen.scss */
+/* line 267, ../sass/screen.scss */
 main #link ul {
   position: relative;
   top: 50%;
@@ -362,13 +414,13 @@ main #link ul {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 232, ../sass/screen.scss */
+/* line 271, ../sass/screen.scss */
 main #link a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
 }
-/* line 237, ../sass/screen.scss */
+/* line 276, ../sass/screen.scss */
 main #link a:hover {
   position: relative;
 }
@@ -382,32 +434,32 @@ main #link a:hover::after {
   top: 50%;
 }
 @media screen and (max-width: 1400px) {
-  /* line 218, ../sass/screen.scss */
+  /* line 257, ../sass/screen.scss */
   main #link {
     max-width: 400px;
   }
 }
 @media screen and (max-width: 1000px) {
-  /* line 218, ../sass/screen.scss */
+  /* line 257, ../sass/screen.scss */
   main #link {
     max-width: 333.33333px;
   }
 }
 @media screen and (max-width: 1000px) {
-  /* line 218, ../sass/screen.scss */
+  /* line 257, ../sass/screen.scss */
   main #link {
     max-width: none;
   }
 }
 @media screen and (max-width: 850px), screen and (max-height: 650px) {
-  /* line 218, ../sass/screen.scss */
+  /* line 257, ../sass/screen.scss */
   main #link {
     max-width: none;
     width: 100%;
   }
 }
 
-/* line 260, ../sass/screen.scss */
+/* line 299, ../sass/screen.scss */
 footer {
   height: 70px;
   position: absolute;
@@ -415,11 +467,11 @@ footer {
   right: 0px;
   width: 100%;
 }
-/* line 267, ../sass/screen.scss */
+/* line 306, ../sass/screen.scss */
 footer .selected {
   fill: white;
 }
-/* line 271, ../sass/screen.scss */
+/* line 310, ../sass/screen.scss */
 footer ul {
   margin: auto;
   height: 100%;
@@ -434,7 +486,7 @@ footer ul {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 279, ../sass/screen.scss */
+/* line 318, ../sass/screen.scss */
 footer ul li {
   height: 100%;
   padding: 0em .5em;
@@ -443,7 +495,7 @@ footer ul li {
   -webkit-flex: 1 0;
   flex: 1 0;
 }
-/* line 287, ../sass/screen.scss */
+/* line 326, ../sass/screen.scss */
 footer ul svg {
   cursor: pointer;
   position: relative;
