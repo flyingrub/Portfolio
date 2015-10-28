@@ -86,8 +86,8 @@ header {
 }
 
 .card {
-	@include white-on-black;
-	//@include black-on-white;
+	//@include white-on-black;
+	@include black-on-white;
 	@include card;
 	overflow-y: auto;
 }

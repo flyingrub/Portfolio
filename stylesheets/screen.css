@@ -173,8 +173,8 @@ header #projects {
 
 /* line 88, ../sass/screen.scss */
 .card {
-  color: #e0e0e0;
-  background: rgba(0, 0, 0, 0.7);
+  color: #121212;
+  background: #e0e0e0;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
