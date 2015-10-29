@@ -10,8 +10,8 @@ var Data = {
 			title: 'TamTime', 
 			contents: 
 				[ 
-					{ message: 'The goal of this project is to provide an easier displacment in the city of Montpellier. It provide an easy way to know the real and theoritcal times of the next Bus/Tram.'},
-					{ message: 'I work mainly on the android part of this project. Some of my friend work on the backend handling the data we get from API.'},
+					{ message: 'The goal of this project is to provide a better way to commute in the city of Montpellier. It provides an easy way to know the real and theoritcal times of the next Bus/Tram.'},
+					{ message: 'I work mainly on the android part of this project. Some of my friends work on the backend handling the data we get from the API.'},
 					{ message: 'We even integrated it with our own server, in order to get the report of event in the TAM network from the user of the app!'}
 				],
 			link: 'https://github.com/flyingrub/TamTime'
@@ -20,7 +20,7 @@ var Data = {
 			title: 'Alea', 
 			contents: 
 				[ 
-					{ message: 'I started this porject because i like music and use soundcloud a lot. I have also seen few times ago some audio reactive website. And i decided to create mine.'},
+					{ message: 'I started this project because i like music and use soundcloud a lot. A moment ago, I saw some some audio reactive website. And i decided to create mine.'},
 					{ message: 'I never worked with javascript before this project. And my css was not very good. That\'s why i decided to use the fewer libraries/framework as possible.'},
 					{ message: 'I don\'t even use the soundcloud javascript libraries, because it use flash. And i am pretty familiar with the soundcloud API so i rewritten my own one.'}
 				],
@@ -30,7 +30,7 @@ var Data = {
 			title: 'Secure Key', 
 			contents: 
 				[ 
-					{ message: 'I have a raspberry pi. And i let it unused a few time. But in my building the lock is hard to unlock. That\'s where the raspberry is take place.'},
+					{ message: 'I have a raspberry pi. And i let it unused a few time. But in my building the lock is hard to unlock. That\'s where the raspberry comes in.'},
 					{ message: 'I had the idea to use the wire from my intercom and connect them to my raspberry pi. Then i only needed to write a little websocket in python. And a client for android.'},
 					{ message: 'Now, any of my friend who know the code can download the app on the PlayStore. And open the front door of my building. It\'s securised with TLS, so no worries :).'}
 				],
