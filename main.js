@@ -137,3 +137,6 @@ particlesJS.load('particles-js', 'node_modules/particles/particlesjs-config.json
 });
 
 
+// Display Card
+var allFrames = document.getElementById('all-frames');
+allFrames.style.opacity = 1;

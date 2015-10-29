@@ -15,6 +15,7 @@ html, body {
 	background-color: #101010;
 	height: 100%;
 	overflow: hidden;
+	z-index: -10;
 }
 
 header {
@@ -104,7 +105,28 @@ header {
 	}
 }
 
+/* The animation code */
+@keyframes disp {
+    0%   {opacity: 0;}
+    25%  {opacity: 0;}
+    50%  {opacity: 0;}
+    75%  {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+@keyframes hide {
+    0%   {opacity: 1;}
+    25%  {opacity: 1;}
+    50%  {opacity: 1;}
+    75%  {opacity: 0;}
+    100% {opacity: 0;}
+}
+
 #all-frames {
+	animation-timing-function: ease;
+	animation-duration: 3s;
+	animation-name: disp;
+	z-index: 20;
 	position: absolute;
 	top: $header-height;
 	bottom: $footer-height;
@@ -112,6 +134,28 @@ header {
 	@include display-flex;
 	@include flex-wrap(wrap);
 	transition: transform 300ms ease;
+}
+
+#flying-logo {
+	animation-timing-function: ease;
+	animation-duration: 3s;
+	animation-name: hide;
+	opacity: 0;
+	z-index: 1;
+	height: 500px;
+	width: 500px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	background-image: url("logo.png");
+	background-size: 500px 500px;
+
+	@media screen and (max-width: 600px) {
+		height: 400px;
+		width: 400px;
+		background-size: 400px 400px;
+	}
 }
 
 main {
