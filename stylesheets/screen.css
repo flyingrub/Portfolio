@@ -425,6 +425,7 @@ main #content {
 }
 /* line 266, ../sass/screen.scss */
 main #content a {
+  outline: none;
   float: right;
   font-size: 16px;
   color: inherit;
@@ -437,11 +438,11 @@ main #content a {
     padding-bottom: 1em;
   }
 }
-/* line 277, ../sass/screen.scss */
+/* line 278, ../sass/screen.scss */
 main #content a:hover {
   text-decoration: underline;
 }
-/* line 282, ../sass/screen.scss */
+/* line 283, ../sass/screen.scss */
 main hr {
   height: 2px;
   background-color: #6b6b6b;
@@ -452,20 +453,20 @@ main hr {
   border-style: none;
 }
 @media screen and (max-width: 1100px), screen and (max-height: 650px) {
-  /* line 282, ../sass/screen.scss */
+  /* line 283, ../sass/screen.scss */
   main hr {
     margin-right: 10%;
     margin-left: 10%;
   }
 }
 @media screen and (max-width: 850px), screen and (max-height: 650px) {
-  /* line 282, ../sass/screen.scss */
+  /* line 283, ../sass/screen.scss */
   main hr {
     margin-top: 40px;
     margin-bottom: 40px;
   }
 }
-/* line 304, ../sass/screen.scss */
+/* line 305, ../sass/screen.scss */
 main #about {
   -webkit-flex: 1 0;
   flex: 1 0;
@@ -479,7 +480,7 @@ main #about {
   line-height: 1.5em;
 }
 @media screen and (min-width: 850px) and (min-height: 650px) {
-  /* line 315, ../sass/screen.scss */
+  /* line 316, ../sass/screen.scss */
   main #about p {
     position: relative;
     top: 50%;
@@ -489,28 +490,28 @@ main #about {
   }
 }
 @media screen and (max-width: 1750px), screen and (max-height: 850px) {
-  /* line 304, ../sass/screen.scss */
+  /* line 305, ../sass/screen.scss */
   main #about {
     font-size: 24px;
     padding: 4em;
   }
 }
 @media screen and (max-width: 1150px), screen and (max-height: 750px) {
-  /* line 304, ../sass/screen.scss */
+  /* line 305, ../sass/screen.scss */
   main #about {
     font-size: 23px;
     padding: 2em;
   }
 }
 @media screen and (max-width: 1000px), screen and (max-height: 600px) {
-  /* line 304, ../sass/screen.scss */
+  /* line 305, ../sass/screen.scss */
   main #about {
     font-size: 22px;
     line-height: 1.4em;
     height: auto;
   }
 }
-/* line 338, ../sass/screen.scss */
+/* line 339, ../sass/screen.scss */
 main .vr {
   -webkit-flex: 1 0;
   flex: 1 0;
@@ -519,12 +520,12 @@ main .vr {
   background-color: #b5b5b5;
 }
 @media screen and (max-width: 850px), screen and (max-height: 650px) {
-  /* line 338, ../sass/screen.scss */
+  /* line 339, ../sass/screen.scss */
   main .vr {
     display: none;
   }
 }
-/* line 349, ../sass/screen.scss */
+/* line 350, ../sass/screen.scss */
 main #link {
   -webkit-flex: 1 0;
   flex: 1 0;
@@ -537,7 +538,7 @@ main #link {
   line-height: 2em;
 }
 @media screen and (min-width: 850px) and (min-height: 650px) {
-  /* line 359, ../sass/screen.scss */
+  /* line 360, ../sass/screen.scss */
   main #link ul {
     position: relative;
     top: 50%;
@@ -547,18 +548,19 @@ main #link {
   }
 }
 @media screen and (max-width: 850px), screen and (max-height: 650px) {
-  /* line 359, ../sass/screen.scss */
+  /* line 360, ../sass/screen.scss */
   main #link ul {
     padding-bottom: 1em;
   }
 }
-/* line 368, ../sass/screen.scss */
+/* line 369, ../sass/screen.scss */
 main #link a {
+  outline: none;
   color: inherit;
   text-decoration: none;
   cursor: pointer;
 }
-/* line 373, ../sass/screen.scss */
+/* line 375, ../sass/screen.scss */
 main #link a:hover {
   position: relative;
 }
@@ -572,25 +574,25 @@ main #link a:hover::after {
   top: 50%;
 }
 @media screen and (max-width: 1400px) {
-  /* line 349, ../sass/screen.scss */
+  /* line 350, ../sass/screen.scss */
   main #link {
     max-width: 400px;
   }
 }
 @media screen and (max-width: 1000px) {
-  /* line 349, ../sass/screen.scss */
+  /* line 350, ../sass/screen.scss */
   main #link {
     max-width: 333.33333px;
   }
 }
 @media screen and (max-width: 1000px) {
-  /* line 349, ../sass/screen.scss */
+  /* line 350, ../sass/screen.scss */
   main #link {
     max-width: none;
   }
 }
 @media screen and (max-width: 850px), screen and (max-height: 650px) {
-  /* line 349, ../sass/screen.scss */
+  /* line 350, ../sass/screen.scss */
   main #link {
     max-width: none;
     width: 100%;
@@ -598,7 +600,7 @@ main #link a:hover::after {
   }
 }
 
-/* line 397, ../sass/screen.scss */
+/* line 399, ../sass/screen.scss */
 footer {
   height: 70px;
   position: absolute;
@@ -608,25 +610,25 @@ footer {
   z-index: 2;
 }
 @media screen and (max-height: 600px) {
-  /* line 397, ../sass/screen.scss */
+  /* line 399, ../sass/screen.scss */
   footer {
     height: 42px;
   }
 }
-/* line 409, ../sass/screen.scss */
+/* line 411, ../sass/screen.scss */
 footer .selected {
   fill: white;
 }
-/* line 413, ../sass/screen.scss */
+/* line 415, ../sass/screen.scss */
 footer .normal {
   fill: none;
 }
-/* line 417, ../sass/screen.scss */
+/* line 419, ../sass/screen.scss */
 footer .circle {
   stroke-width: 1;
   stroke: white;
 }
-/* line 422, ../sass/screen.scss */
+/* line 424, ../sass/screen.scss */
 footer ul {
   margin: auto;
   height: 100%;
@@ -641,7 +643,7 @@ footer ul {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 430, ../sass/screen.scss */
+/* line 432, ../sass/screen.scss */
 footer ul li {
   height: 100%;
   padding: 0em .5em;
@@ -650,7 +652,7 @@ footer ul li {
   -webkit-flex: 1 0;
   flex: 1 0;
 }
-/* line 438, ../sass/screen.scss */
+/* line 440, ../sass/screen.scss */
 footer ul svg {
   cursor: pointer;
   position: relative;
