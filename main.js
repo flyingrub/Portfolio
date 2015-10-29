@@ -130,6 +130,16 @@ window.onkeydown = function(evt) {
     }
 };
 
+window.ontouchmove = function(e) {
+	e.preventDefault();
+}
+
+window.ontouchstart = function(e) {
+    if (e.target.nodeName !== 'INPUT') {
+        e.preventDefault();
+    }	
+}
+
 // Particle
 
 particlesJS.load('particles-js', 'node_modules/particles/particlesjs-config.json', function() {
