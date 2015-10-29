@@ -84,7 +84,7 @@ var header = new Vue({
 var classname = document.getElementsByClassName("card");
 
 var onMouseOver = function() {
-	hasScrollBar = this.scrollHeight!=this.clientHeight
+	hasScrollBar = this.scrollHeight!=this.clientHeight;
     canScroll = !hasScrollBar;
 };
 
@@ -138,5 +138,11 @@ particlesJS.load('particles-js', 'node_modules/particles/particlesjs-config.json
 
 
 // Display Card
-var allFrames = document.getElementById('all-frames');
-allFrames.style.opacity = 1;
+var endTransition = function() {
+	logo.style.display = "none";
+}
+
+var logo = document.getElementById('flying-logo');
+setTimeout(endTransition, 3000);
+
+

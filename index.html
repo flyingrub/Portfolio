@@ -48,7 +48,7 @@
 		<ul v-style="width: px + 'px'">
 			<li v-on="click: goTo($index)" v-repeat="size">
 				<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-				<circle class="{{ current == $index ? 'selected' : ''}}" cx="15" cy="15" r="3" fill="none" style="stroke:white;stroke-width:1" />
+				<circle class="{{ current == $index ? 'circle selected' : 'circle normal'}}" cx="15" cy="15" r="3"/>
 				</svg>
 			</li>
 		</ul>

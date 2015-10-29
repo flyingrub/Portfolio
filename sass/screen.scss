@@ -11,11 +11,9 @@ $footer-height: 70px;
 $link-width: 500px;
 
 html, body {
-	//background-image: url("test.png");
 	background-color: #101010;
 	height: 100%;
 	overflow: hidden;
-	z-index: -10;
 }
 
 header {
@@ -25,6 +23,11 @@ header {
 	top: 0px;
 	right: 0px;
 	width: 100%;
+
+	@media screen and (max-height: 600px) {
+		height: $header-height * 0.7;
+	}
+
 	div {
 		@include inline-block(middle);
 		@include float-right;
@@ -119,14 +122,22 @@ header {
     25%  {opacity: 1;}
     50%  {opacity: 1;}
     75%  {opacity: 0;}
-    100% {opacity: 0;}
+    100% {opacity: 0; }
+}
+
+@keyframes none {
+    0%   {display: inline;}
+    25%  {display: inline;}
+    50%  {display: inline;}
+    75%  {display: inline;}
+    100% {display: none; }
 }
 
 #all-frames {
 	animation-timing-function: ease;
 	animation-duration: 3s;
 	animation-name: disp;
-	z-index: 20;
+	z-index: 1;
 	position: absolute;
 	top: $header-height;
 	bottom: $footer-height;
@@ -134,6 +145,11 @@ header {
 	@include display-flex;
 	@include flex-wrap(wrap);
 	transition: transform 300ms ease;
+
+	@media screen and (max-height: 600px) {
+		top: $header-height * 0.7;
+		bottom: $footer-height * 0.6;
+	}
 }
 
 #flying-logo {
@@ -281,6 +297,7 @@ main {
 		text-align: justify;
 		text-justify: inter-word;
 		line-height: 1.5em;
+		
 		p {
 			@include vertical-align;
 		}
@@ -298,6 +315,7 @@ main {
 		@media screen and (max-width: 1000px), screen and (max-height: 600px) {
 			font-size: 22px;
 			line-height: 1.4em;
+			height: none;
 		}
 	}
 
@@ -360,9 +378,23 @@ footer {
 	bottom: 0px;
 	right: 0px;
 	width: 100%;
+	z-index: 2;
+
+	@media screen and (max-height: 600px) {
+		height: $footer-height * 0.6;
+	}
 
 	.selected {
 		fill: white;
+	}
+
+	.normal {
+		fill: none;
+	}
+
+	.circle {
+		stroke-width:1;
+		stroke:white;
 	}
 
 	ul {
