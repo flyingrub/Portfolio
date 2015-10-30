@@ -153,6 +153,10 @@ window.ontouchstart = function(e) {
 	event.originalTarget.dispatchEvent(newEvt);
 }
 
+window.onload = function() {
+	setTimeout(hideLogo, 3000);
+}
+
 // Particle
 
 particlesJS.load('particles-js', 'node_modules/particles/particlesjs-config.json', function() {
@@ -161,11 +165,12 @@ particlesJS.load('particles-js', 'node_modules/particles/particlesjs-config.json
 
 
 // Display Card
-var endTransition = function() {
+var hideLogo = function() {
+	var logo = document.getElementById('flying-logo');
 	logo.style.display = "none";
 }
 
-var logo = document.getElementById('flying-logo');
-setTimeout(endTransition, 3000);
+
+
 
 
