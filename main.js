@@ -85,16 +85,16 @@ var classname = document.getElementsByClassName("card");
 
 var onMouseOver = function() {
 	hasScrollBar = this.scrollHeight!=this.clientHeight;
-    canScroll = !hasScrollBar;
+	canScroll = !hasScrollBar;
 };
 
 var onMouseOut = function() {
-    canScroll = true;
+	canScroll = true;
 };
 
 for(var i=0;i<classname.length;i++){
-    classname[i].addEventListener('mouseover', onMouseOver, false);
-    classname[i].addEventListener('mouseout', onMouseOut, false);
+	classname[i].addEventListener('mouseover', onMouseOver, false);
+	classname[i].addEventListener('mouseout', onMouseOut, false);
 }
 
 window.onresize = function(event) {
@@ -115,43 +115,89 @@ window.onwheel = function (e) {
 }
 
 window.onkeydown = function(evt) {
-    evt = evt || window.event;
-    var keyCode = evt.keyCode;
-    if (keyCode == 37) {
-    	goToThisCard(currentCard -1);
-    	evt.preventDefault()
-    }
-    if (keyCode == 39) {
-    	goToThisCard(currentCard +1);
-    	evt.preventDefault()
-    }
-    if (keyCode <= 38 && keyCode >= 40) {
-        return false;
-    }
+	evt = evt || window.event;
+	var keyCode = evt.keyCode;
+	if (keyCode == 37) {
+		goToThisCard(currentCard -1);
+		evt.preventDefault()
+	}
+	if (keyCode == 39) {
+		goToThisCard(currentCard +1);
+		evt.preventDefault()
+	}
+	if (keyCode <= 38 && keyCode >= 40) {
+		return false;
+	}
 };
 
-window.ontouchmove = function(e) {
+// TOUCH handler
+swipe_det = new Object();
+swipe_det.sX = 0;
+swipe_det.sY = 0;
+swipe_det.eX = 0;
+swipe_det.eY = 0;
+var min_x = 20;  //min x swipe for horizontal swipe
+var max_x = 40;  //max x difference for vertical swipe
+var min_y = 40;  //min y swipe for vertical swipe
+var max_y = 50;  //max y difference for horizontal swipe
+var direc = "";
+ele = window;
+ele.addEventListener('touchstart',function(e) {
+	var t = e.touches[0];
+	swipe_det.sX = t.screenX; 
+	swipe_det.sY = t.screenY;
+},false);
+ele.addEventListener('touchmove',function(e) {
 	e.preventDefault();
-}
+	var t = e.touches[0];
+	swipe_det.eX = t.screenX; 
+	swipe_det.eY = t.screenY;    
+},false);
+ele.addEventListener('touchend',function(e) {
+	//horizontal detection
+	if ((((swipe_det.eX - min_x > swipe_det.sX) || (swipe_det.eX + min_x < swipe_det.sX)) && ((swipe_det.eY < swipe_det.sY + max_y) && (swipe_det.sY > swipe_det.eY - max_y)))) {
+		if(swipe_det.eX > swipe_det.sX) {
+			direc = "r";
+			goToThisCard(currentCard -1);
+		} else {
+			direc = "l";
+			goToThisCard(currentCard +1);
+		}
 
-window.ontouchstart = function(e) {
-	evt.preventDefault();
-	if (evt.touches.length > 1 || (evt.type == "touchend" && evt.touches.length > 0))
-		return;
-
-	var newEvt = document.createEvent("MouseEvents");
-	var type = null;
-	var touch = null;
-	switch (event.type) {
-		case "touchstart": type = "mousedown"; touch = event.changedTouches[0];
-		case "touchmove":  type = "mousemove"; touch = event.changedTouches[0];
-		case "touchend":   type = "mouseup"; touch = event.changedTouches[0];
 	}
-	newEvt.initMouseEvent(type, true, true, event.originalTarget.ownerDocument.defaultView, 0,
-	touch.screenX, touch.screenY, touch.clientX, touch.clientY,
-	evt.ctrlKey, evt.altKey, evt.shirtKey, evt.metaKey, 0, null);
-	event.originalTarget.dispatchEvent(newEvt);
+	//vertical detection
+	if ((((swipe_det.eY - min_y > swipe_det.sY) || (swipe_det.eY + min_y < swipe_det.sY)) && ((swipe_det.eX < swipe_det.sX + max_x) && (swipe_det.sX > swipe_det.eX - max_x)))) {
+		deltaY = swipe_det.sY - swipe_det.eY;
+		
+		el = e.target;
+		while (el.nodeName != "MAIN" && el.nodeName != "HTML") {
+			el = el.parentElement;
+		}
+		if (el.nodeName == "MAIN") {
+			console.log(el);
+			el.scrollBy(0, deltaY);
+		}
+		
+	}
+
+	if (direc != "") {
+		if(typeof func == 'function') func(el,direc);
+	}
+	direc = "";
+},false);
+
+function scrollBy(el, amount) {
+	x = 0;
+	while (x <= Math.abs(amount)) {
+		console.log("scrolling")
+		el.scrollBy(0, 10 * Math.sign(amount));
+		x +=10;
+	}
 }
+
+var scroll() = 
+
+// LOAD
 
 window.onload = function() {
 	setTimeout(hideLogo, 3000);

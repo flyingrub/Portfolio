@@ -181,6 +181,7 @@ main {
 	margin-right: $margin-header;
 	margin-left: $margin-header;
 	color: white;
+	scroll-behavior: smooth;
 
 	@media screen and (max-width: 1650px) {
 		margin-right: $margin-header /2;
