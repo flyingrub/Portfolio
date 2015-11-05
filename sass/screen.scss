@@ -13,6 +13,7 @@ $link-width: 500px;
 html, body {
 	background-color: #101010;
 	height: 100%;
+	width: 100%;
 	overflow: hidden;
 }
 
@@ -141,7 +142,7 @@ header {
 	position: absolute;
 	top: $header-height;
 	bottom: $footer-height;
-	overflow-y: hidden;
+	overflow: hidden;
 	@include display-flex;
 	@include flex-wrap(wrap);
 	transition: transform 300ms ease;
@@ -181,7 +182,6 @@ main {
 	margin-right: $margin-header;
 	margin-left: $margin-header;
 	color: white;
-	scroll-behavior: smooth;
 
 	@media screen and (max-width: 1650px) {
 		margin-right: $margin-header /2;

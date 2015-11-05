@@ -140,67 +140,45 @@ var min_x = 20;  //min x swipe for horizontal swipe
 var max_x = 40;  //max x difference for vertical swipe
 var min_y = 40;  //min y swipe for vertical swipe
 var max_y = 50;  //max y difference for horizontal swipe
-var direc = "";
-ele = window;
-ele.addEventListener('touchstart',function(e) {
+
+
+window.addEventListener('touchstart', function(e) {
 	var t = e.touches[0];
-	swipe_det.sX = t.screenX; 
+	swipe_det.sX = t.screenX;
 	swipe_det.sY = t.screenY;
-},false);
-ele.addEventListener('touchmove',function(e) {
-	e.preventDefault();
+});
+
+window.addEventListener('touchmove', function(e) {
 	var t = e.touches[0];
-	swipe_det.eX = t.screenX; 
-	swipe_det.eY = t.screenY;    
-},false);
-ele.addEventListener('touchend',function(e) {
+	swipe_det.eX = t.screenX;
+	swipe_det.eY = t.screenY;
+});
+
+window.addEventListener('touchend', function(e) {
 	//horizontal detection
 	if ((((swipe_det.eX - min_x > swipe_det.sX) || (swipe_det.eX + min_x < swipe_det.sX)) && ((swipe_det.eY < swipe_det.sY + max_y) && (swipe_det.sY > swipe_det.eY - max_y)))) {
+		deltaX = Math.abs(swipe_det.sX - swipe_det.eX);
+		deltaY = Math.abs(swipe_det.sY - swipe_det.eY);
+		if (deltaY > deltaX) {
+			return;
+		}
 		if(swipe_det.eX > swipe_det.sX) {
-			direc = "r";
+			direc = "r"; 
 			goToThisCard(currentCard -1);
 		} else {
 			direc = "l";
 			goToThisCard(currentCard +1);
 		}
+	}
+});
 
-	}
-	//vertical detection
-	if ((((swipe_det.eY - min_y > swipe_det.sY) || (swipe_det.eY + min_y < swipe_det.sY)) && ((swipe_det.eX < swipe_det.sX + max_x) && (swipe_det.sX > swipe_det.eX - max_x)))) {
-		deltaY = swipe_det.sY - swipe_det.eY;
-		
-		el = e.target;
-		while (el.nodeName != "MAIN" && el.nodeName != "HTML") {
-			el = el.parentElement;
-		}
-		if (el.nodeName == "MAIN") {
-			console.log(el);
-			el.scrollBy(0, deltaY);
-		}
-		
-	}
-
-	if (direc != "") {
-		if(typeof func == 'function') func(el,direc);
-	}
-	direc = "";
-},false);
-
-function scrollBy(el, amount) {
-	x = 0;
-	while (x <= Math.abs(amount)) {
-		console.log("scrolling")
-		el.scrollBy(0, 10 * Math.sign(amount));
-		x +=10;
-	}
+window.onscroll = function() {
+	window.scrollTo(0, window.pageYOffset);
 }
 
-var scroll() = 
-
 // LOAD
-
 window.onload = function() {
-	setTimeout(hideLogo, 3000);
+	setTimeout(hideLogo, 2000);
 }
 
 // Particle
