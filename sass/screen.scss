@@ -38,7 +38,7 @@ header {
 		@include vertical-align;
 	}
 	
-	#logo {
+	#head-logo {
 		@include float-left;
 		font-size: 40px;
 		margin-left: $margin-header;
@@ -61,7 +61,7 @@ header {
 		}
 	}
 
-	#about {
+	#head-about {
 		margin-right: 2em;
 
 		@media screen and (max-width: 500px) {
@@ -69,7 +69,7 @@ header {
 		}
 	}
 
-	#projects {
+	#head-projects {
 		margin-right: $margin-header;
 
 		@media screen and (max-width: 1650px) {

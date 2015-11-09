@@ -38,16 +38,16 @@ var Data = {
 		}
 	],
 	pos: 0
-}
+};
 Data.numberOfCard = Data.projects.length +1;
-Data.allFramesWidth = 100 * Data.numberOfCard
-Data.oneCardWidth = 100 / Data.numberOfCard
+Data.allFramesWidth = 100 * Data.numberOfCard;
+Data.oneCardWidth = 100 / Data.numberOfCard;
 
 var footerData = {
 	size: Data.numberOfCard,
 	px: 65 * Data.numberOfCard,
 	current: 0
-}
+};
 
 // SETUP VIEW
 var goToThisCard = function(pos) {
@@ -57,12 +57,12 @@ var goToThisCard = function(pos) {
 	currentCard = pos;
 	footerData.current = pos;
 	Data.pos = -pos* w;
-}
+};
 
 var allCards = new Vue({
 	el: '#all-frames',
 	data: Data
-})
+});
 
 var footer = new Vue({
 	el: '#footer',
@@ -70,22 +70,26 @@ var footer = new Vue({
 	methods: {
 		goTo: goToThisCard
 	}
-})
+});
 
 var header = new Vue({
 	el: '#header',
 	methods: {
 		goTo: goToThisCard
 	}
-})
+});
 
-// Listener
 
+// UI
 var classname = document.getElementsByClassName("card");
 
+function hasOverflow(el){
+	return el.scrollHeight > el.clientHeight;
+}
+
+// Listener
 var onMouseOver = function() {
-	hasScrollBar = this.scrollHeight!=this.clientHeight;
-	canScroll = !hasScrollBar;
+	canScroll = !hasOverflow(this);
 };
 
 var onMouseOut = function() {
@@ -95,11 +99,12 @@ var onMouseOut = function() {
 for(var i=0;i<classname.length;i++){
 	classname[i].addEventListener('mouseover', onMouseOver, false);
 	classname[i].addEventListener('mouseout', onMouseOut, false);
-}
+};
 
 window.onresize = function(event) {
 	w = window.innerWidth;
 	goToThisCard(currentCard);
+	trim();
 };
 
 window.onwheel = function (e) {
@@ -112,18 +117,18 @@ window.onwheel = function (e) {
 		oldScroll = new Date();
 		oldScroll.setMilliseconds(oldScroll.getMilliseconds() + 500);
 	}
-}
+};
 
 window.onkeydown = function(evt) {
 	evt = evt || window.event;
 	var keyCode = evt.keyCode;
 	if (keyCode == 37) {
 		goToThisCard(currentCard -1);
-		evt.preventDefault()
+		evt.preventDefault();
 	}
 	if (keyCode == 39) {
 		goToThisCard(currentCard +1);
-		evt.preventDefault()
+		evt.preventDefault();
 	}
 	if (keyCode <= 38 && keyCode >= 40) {
 		return false;
@@ -149,6 +154,7 @@ window.addEventListener('touchstart', function(e) {
 });
 
 window.addEventListener('touchmove', function(e) {
+	window.scrollTo(0, window.pageYOffset);
 	var t = e.touches[0];
 	swipe_det.eX = t.screenX;
 	swipe_det.eY = t.screenY;
@@ -174,15 +180,14 @@ window.addEventListener('touchend', function(e) {
 
 window.onscroll = function() {
 	window.scrollTo(0, window.pageYOffset);
-}
+};
 
 // LOAD
 window.onload = function() {
 	setTimeout(hideLogo, 2000);
-}
+};
 
 // Particle
-
 particlesJS.load('particles-js', 'node_modules/particles/particlesjs-config.json', function() {
   console.log('callback - particles.js config loaded');
 });
@@ -192,9 +197,4 @@ particlesJS.load('particles-js', 'node_modules/particles/particlesjs-config.json
 var hideLogo = function() {
 	var logo = document.getElementById('flying-logo');
 	logo.style.display = "none";
-}
-
-
-
-
-
+};
