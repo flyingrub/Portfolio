@@ -104,7 +104,6 @@ for(var i=0;i<classname.length;i++){
 window.onresize = function(event) {
 	w = window.innerWidth;
 	goToThisCard(currentCard);
-	trim();
 };
 
 window.onwheel = function (e) {
@@ -135,6 +134,10 @@ window.onkeydown = function(evt) {
 	}
 };
 
+window.onscroll = function(event) {
+	window.scrollTo(0, window.pageYOffset);
+};
+
 // TOUCH handler
 swipe_det = new Object();
 swipe_det.sX = 0;
@@ -154,7 +157,6 @@ window.addEventListener('touchstart', function(e) {
 });
 
 window.addEventListener('touchmove', function(e) {
-	window.scrollTo(0, window.pageYOffset);
 	var t = e.touches[0];
 	swipe_det.eX = t.screenX;
 	swipe_det.eY = t.screenY;
@@ -177,10 +179,6 @@ window.addEventListener('touchend', function(e) {
 		}
 	}
 });
-
-window.onscroll = function() {
-	window.scrollTo(0, window.pageYOffset);
-};
 
 // LOAD
 window.onload = function() {
