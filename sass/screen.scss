@@ -25,7 +25,7 @@ header {
 	right: 0px;
 	width: 100%;
 
-	@media screen and (max-height: 600px) {
+	@media screen and (max-height: 650px) {
 		height: $header-height * 0.7;
 	}
 
@@ -147,7 +147,7 @@ header {
 	@include flex-wrap(wrap);
 	transition: transform 300ms ease;
 
-	@media screen and (max-height: 600px) {
+	@media screen and (max-height: 650px) {
 		top: $header-height * 0.7;
 		bottom: $footer-height * 0.6;
 	}
@@ -401,7 +401,7 @@ footer {
 	width: 100%;
 	z-index: 2;
 
-	@media screen and (max-height: 600px) {
+	@media screen and (max-height: 650px) {
 		height: $footer-height * 0.6;
 	}
 
