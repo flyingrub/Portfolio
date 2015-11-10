@@ -315,7 +315,7 @@ main {
 		line-height: 1.5em;
 		
 		p {
-			@media screen and (min-width: 850px) and (min-height: 650px) {
+			@media screen and (min-width: 1050px) and (min-height: 650px) {
 				@include vertical-align;
 			}
 		}
