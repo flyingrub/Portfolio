@@ -103,7 +103,7 @@ header {
 	@include flex-direction(row);
 	align-items: center;
 
-	@media screen and (max-width: 850px), screen and (max-height: 650px) {
+	@media screen and (max-width: 1050px), screen and (max-height: 650px) {
 		display: block;
 		overflow-x: hidden;
 	}
@@ -330,7 +330,7 @@ main {
 			padding: 2em;
 		}
 
-		@media screen and (max-width: 1000px), screen and (max-height: 600px) {
+		@media screen and (max-width: 1050px), screen and (max-height: 650px) {
 			font-size: 22px;
 			line-height: 1.4em;
 			height: auto;
@@ -343,7 +343,7 @@ main {
 		height: 500px;
 		background-color: darken($white-color, 25%);
 
-		@media screen and (max-width: 850px), screen and (max-height: 650px) {
+		@media screen and (max-width: 1050px), screen and (max-height: 650px) {
 			display: none;
 		}
 	}
@@ -359,10 +359,10 @@ main {
 		line-height: 2em;
 
 		ul {
-			@media screen and (min-width: 850px) and (min-height: 650px) {
+			@media screen and (min-width: 1050px) and (min-height: 650px) {
 				@include vertical-align;
 			}
-			@media screen and (max-width: 850px), screen and (max-height: 650px) {
+			@media screen and (max-width: 1050px), screen and (max-height: 650px) {
 				padding-bottom: 1em;
 			}
 		}
@@ -385,11 +385,7 @@ main {
 			max-width: $link-width / 1.5;
 		}
 
-		@media screen and (max-width: 1000px) {
-			max-width: none;
-		}
-
-		@media screen and (max-width: 850px), screen and (max-height: 650px) {
+		@media screen and (max-width: 1050px), screen and (max-height: 650px) {
 			max-width: none;
 			width: 100%;
 			height: auto;
