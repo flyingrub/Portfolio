@@ -196,4 +196,6 @@ var hideLogo = function() {
 	var logo = document.getElementById('flying-logo');
 	logo.style.display = "none";
 	w = window.innerWidth;
+	alert(navigator.userAgent);
 };
+
