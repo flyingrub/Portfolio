@@ -1,4 +1,4 @@
-var w = window.innerWidth;
+var w;
 var currentCard = 0;
 var oldScroll = new Date();
 var canScroll = true;
@@ -195,4 +195,5 @@ particlesJS.load('particles-js', 'node_modules/particles/particlesjs-config.json
 var hideLogo = function() {
 	var logo = document.getElementById('flying-logo');
 	logo.style.display = "none";
+	w = window.innerWidth;
 };
