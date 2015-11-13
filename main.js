@@ -183,6 +183,7 @@ window.addEventListener('touchend', function(e) {
 // LOAD
 window.onload = function() {
 	setTimeout(hideLogo, 2000);
+	detectBrowser();
 };
 
 // Particle
@@ -191,11 +192,20 @@ particlesJS.load('particles-js', 'node_modules/particles/particlesjs-config.json
 });
 
 
-// Display Card
+// Hide the logo
 var hideLogo = function() {
 	var logo = document.getElementById('flying-logo');
 	logo.style.display = "none";
-	w = window.innerWidth;
-	alert(navigator.userAgent);
+	w = window.innerWidth;	
 };
+
+function detectBrowser() {
+	//alert(navigator.userAgent);
+	if ((navigator.userAgent.match(/Android/i) && navigator.userAgent.match(/Firefox/i))
+		|| navigator.userAgent.match(/Opera Mini/i)
+		|| /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor)
+		) { 
+		alert("Your mileage may vary according to your current browser. Please use Chrome or Opera on your mobile.")
+	}
+}
 
