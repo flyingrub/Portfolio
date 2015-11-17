@@ -203,7 +203,7 @@ function detectBrowser() {
 	//alert(navigator.userAgent);
 	if ((navigator.userAgent.match(/Android/i) && navigator.userAgent.match(/Firefox/i))
 		|| navigator.userAgent.match(/Opera Mini/i)
-		|| /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor)
+		|| /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor) && navigator.userAgent.match(/Mobile/i)
 		) { 
 		alert("Your mileage may vary according to your current browser. Please use Chrome or Opera on your mobile.")
 	}
