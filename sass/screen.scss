@@ -25,6 +25,10 @@ header {
 	right: 0px;
 	width: 100%;
 
+	@media screen and (max-height: 800px) {
+		height: $header-height * 0.8;
+	}
+
 	@media screen and (max-height: 650px) {
 		height: $header-height * 0.7;
 	}
@@ -146,6 +150,11 @@ header {
 	@include display-flex;
 	@include flex-wrap(wrap);
 	transition: transform 300ms ease;
+
+	@media screen and (max-height: 800px) {
+		top: $header-height * 0.8;
+		bottom: $footer-height * 0.8;
+	}
 
 	@media screen and (max-height: 650px) {
 		top: $header-height * 0.7;
@@ -401,6 +410,10 @@ footer {
 	width: 100%;
 	z-index: 2;
 
+	@media screen and (max-height: 800px) {
+		height: $footer-height * 0.8;
+	}
+
 	@media screen and (max-height: 650px) {
 		height: $footer-height * 0.6;
 	}
@@ -426,24 +439,38 @@ footer {
 		@include flex-wrap(wrap);
 		@include vertical-align;
 
+		@media screen and (max-height: 800px) {
+			height: $footer-height * 0.8;
+		}
+
 		@media screen and (max-height: 650px) {
 			height: $footer-height * 0.6;
 		}
 
 		li {
 			height: $footer-height;
-			padding: 0em .5em;
+			width: 70px;
 			display: inline-block; /* non-flexbox browsers */
 			@include flex(1 0);
+			@include display-flex;
+			align-items: center;
+			justify-content: center;
+
+			@media screen and (max-height: 800px) {
+				height: $footer-height * 0.8;
+			}
 
 			@media screen and (max-height: 650px) {
 				height: $footer-height * 0.6;
 			}
 		}
 		svg {
-			height: $footer-height;
+			height: $footer-height * 0.8;
 			cursor: pointer;
-			@include vertical-align;
+
+			@media screen and (max-height: 800px) {
+				height: $footer-height * 0.7;
+			}
 
 			@media screen and (max-height: 650px) {
 				height: $footer-height * 0.6;

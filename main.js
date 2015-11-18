@@ -45,7 +45,7 @@ Data.oneCardWidth = 100 / Data.numberOfCard;
 
 var footerData = {
 	size: Data.numberOfCard,
-	px: 65 * Data.numberOfCard,
+	px: 70 * Data.numberOfCard,
 	current: 0
 };
 
@@ -203,7 +203,7 @@ function detectBrowser() {
 	//alert(navigator.userAgent);
 	if ((navigator.userAgent.match(/Android/i) && navigator.userAgent.match(/Firefox/i))
 		|| navigator.userAgent.match(/Opera Mini/i)
-		|| /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor) && navigator.userAgent.match(/Mobile/i)
+		|| (/Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor) && navigator.userAgent.match(/Mobile/i))
 		) { 
 		alert("Your mileage may vary according to your current browser. Please use Chrome or Opera on your mobile.")
 	}
