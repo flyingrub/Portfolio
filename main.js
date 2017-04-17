@@ -1,4 +1,4 @@
-var w = window.innerWidth;
+var w;
 var currentCard = 0;
 var oldScroll = new Date();
 var canScroll = true;
@@ -10,9 +10,9 @@ var Data = {
 			title: 'TamTime', 
 			contents: 
 				[ 
-					{ message: 'The goal of this project is to provide a better way to commute in the city of Montpellier. It provides an easy way to know the real and theoritcal times of the next Bus/Tram.'},
-					{ message: 'I work mainly on the android part of this project. Some of my friends work on the backend handling the data we get from the API.'},
-					{ message: 'We even integrated it with our own server, in order to get the report of event in the TAM network from the user of the app!'}
+					{ message: 'The aim of this project is to provide a better way to commute in the city of Montpellier. It provides an easy way to know the real and theoretical times of the next Bus/Tram of the TaM company.'},
+					{ message: 'I work mainly on the Android part of this project. Some of my friends work on the back-end handling the data we get from the bus company\'s API.'},
+					{ message: 'We even integrated it with our own server, in order to allow users to report events in the TaM network.'}
 				],
 			link: 'https://github.com/flyingrub/TamTime'
 		},
@@ -20,9 +20,9 @@ var Data = {
 			title: 'Alea', 
 			contents: 
 				[ 
-					{ message: 'I started this project because i like music and use soundcloud a lot. A moment ago, I saw some some audio reactive website. And i decided to create mine.'},
-					{ message: 'I never worked with javascript before this project. And my css was not very good. That\'s why i decided to use the fewer libraries/framework as possible.'},
-					{ message: 'I don\'t even use the soundcloud javascript libraries, because it use flash. And i am pretty familiar with the soundcloud API so i rewritten my own one.'}
+					{ message: 'I started this project because I like music and use Soundcloud a lot. A moment ago, I saw some some audio reactive websites, and I decided to create mine.'},
+					{ message: ' I had never worked with JavaScript before this project. I didn\'t have a lot experience with CSS either. That\'s why I decided to use the fewer libraries/framework as possible.'},
+					{ message: 'I don\'t even use the Soundcloud JavaScript libraries, because it uses flash. And I am pretty familiar with the soundcloud API so i rewrote my own one.'}
 				],
 			link: 'http://alea.xyz/'
 		},
@@ -30,24 +30,24 @@ var Data = {
 			title: 'Secure Key', 
 			contents: 
 				[ 
-					{ message: 'I have a raspberry pi. And i let it unused a few time. But in my building the lock is hard to unlock. That\'s where the raspberry comes in.'},
-					{ message: 'I had the idea to use the wire from my intercom and connect them to my raspberry pi. Then i only needed to write a little websocket in python. And a client for android.'},
-					{ message: 'Now, any of my friend who know the code can download the app on the PlayStore. And open the front door of my building. It\'s securised with TLS, so no worries :).'}
+					{ message: 'I have a raspberry pi, and I sometimes leave it unused. But in my building the door is hard to unlock with the regular key.'},
+					{ message: 'I had the idea to use the wires from my intercom and connect them to my raspberry pi. Then I only needed to write a little websocket in Python and a client for Android.'},
+					{ message: ' Now, any of my friends who knows the code can download the app on the PlayStore, and open the front door of my building. It\'s secured with TLS, so no worries :).'}
 				],
 			link: 'https://github.com/flyingrub/SecureKey'
 		}
 	],
 	pos: 0
-}
+};
 Data.numberOfCard = Data.projects.length +1;
-Data.allFramesWidth = 100 * Data.numberOfCard
-Data.oneCardWidth = 100 / Data.numberOfCard
+Data.allFramesWidth = 100 * Data.numberOfCard;
+Data.oneCardWidth = 100 / Data.numberOfCard;
 
 var footerData = {
 	size: Data.numberOfCard,
-	px: 65 * Data.numberOfCard,
+	px: 70 * Data.numberOfCard,
 	current: 0
-}
+};
 
 // SETUP VIEW
 var goToThisCard = function(pos) {
@@ -57,12 +57,12 @@ var goToThisCard = function(pos) {
 	currentCard = pos;
 	footerData.current = pos;
 	Data.pos = -pos* w;
-}
+};
 
 var allCards = new Vue({
 	el: '#all-frames',
 	data: Data
-})
+});
 
 var footer = new Vue({
 	el: '#footer',
@@ -70,22 +70,26 @@ var footer = new Vue({
 	methods: {
 		goTo: goToThisCard
 	}
-})
+});
 
 var header = new Vue({
 	el: '#header',
 	methods: {
 		goTo: goToThisCard
 	}
-})
+});
 
-// Listener
 
+// UI
 var classname = document.getElementsByClassName("card");
 
+function hasOverflow(el){
+	return el.scrollHeight > el.clientHeight;
+}
+
+// Listener
 var onMouseOver = function() {
-	hasScrollBar = this.scrollHeight!=this.clientHeight;
-	canScroll = !hasScrollBar;
+	canScroll = !hasOverflow(this);
 };
 
 var onMouseOut = function() {
@@ -95,7 +99,7 @@ var onMouseOut = function() {
 for(var i=0;i<classname.length;i++){
 	classname[i].addEventListener('mouseover', onMouseOver, false);
 	classname[i].addEventListener('mouseout', onMouseOut, false);
-}
+};
 
 window.onresize = function(event) {
 	w = window.innerWidth;
@@ -112,22 +116,26 @@ window.onwheel = function (e) {
 		oldScroll = new Date();
 		oldScroll.setMilliseconds(oldScroll.getMilliseconds() + 500);
 	}
-}
+};
 
 window.onkeydown = function(evt) {
 	evt = evt || window.event;
 	var keyCode = evt.keyCode;
 	if (keyCode == 37) {
 		goToThisCard(currentCard -1);
-		evt.preventDefault()
+		evt.preventDefault();
 	}
 	if (keyCode == 39) {
 		goToThisCard(currentCard +1);
-		evt.preventDefault()
+		evt.preventDefault();
 	}
 	if (keyCode <= 38 && keyCode >= 40) {
 		return false;
 	}
+};
+
+window.onscroll = function(event) {
+	window.scrollTo(0, window.pageYOffset);
 };
 
 // TOUCH handler
@@ -140,83 +148,64 @@ var min_x = 20;  //min x swipe for horizontal swipe
 var max_x = 40;  //max x difference for vertical swipe
 var min_y = 40;  //min y swipe for vertical swipe
 var max_y = 50;  //max y difference for horizontal swipe
-var direc = "";
-ele = window;
-ele.addEventListener('touchstart',function(e) {
+
+
+window.addEventListener('touchstart', function(e) {
 	var t = e.touches[0];
-	swipe_det.sX = t.screenX; 
+	swipe_det.sX = t.screenX;
 	swipe_det.sY = t.screenY;
-},false);
-ele.addEventListener('touchmove',function(e) {
-	e.preventDefault();
+});
+
+window.addEventListener('touchmove', function(e) {
 	var t = e.touches[0];
-	swipe_det.eX = t.screenX; 
-	swipe_det.eY = t.screenY;    
-},false);
-ele.addEventListener('touchend',function(e) {
+	swipe_det.eX = t.screenX;
+	swipe_det.eY = t.screenY;
+});
+
+window.addEventListener('touchend', function(e) {
 	//horizontal detection
 	if ((((swipe_det.eX - min_x > swipe_det.sX) || (swipe_det.eX + min_x < swipe_det.sX)) && ((swipe_det.eY < swipe_det.sY + max_y) && (swipe_det.sY > swipe_det.eY - max_y)))) {
+		deltaX = Math.abs(swipe_det.sX - swipe_det.eX);
+		deltaY = Math.abs(swipe_det.sY - swipe_det.eY);
+		if (deltaY > deltaX) {
+			return;
+		}
 		if(swipe_det.eX > swipe_det.sX) {
-			direc = "r";
+			direc = "r"; 
 			goToThisCard(currentCard -1);
 		} else {
 			direc = "l";
 			goToThisCard(currentCard +1);
 		}
-
 	}
-	//vertical detection
-	if ((((swipe_det.eY - min_y > swipe_det.sY) || (swipe_det.eY + min_y < swipe_det.sY)) && ((swipe_det.eX < swipe_det.sX + max_x) && (swipe_det.sX > swipe_det.eX - max_x)))) {
-		deltaY = swipe_det.sY - swipe_det.eY;
-		
-		el = e.target;
-		while (el.nodeName != "MAIN" && el.nodeName != "HTML") {
-			el = el.parentElement;
-		}
-		if (el.nodeName == "MAIN") {
-			console.log(el);
-			el.scrollBy(0, deltaY);
-		}
-		
-	}
-
-	if (direc != "") {
-		if(typeof func == 'function') func(el,direc);
-	}
-	direc = "";
-},false);
-
-function scrollBy(el, amount) {
-	x = 0;
-	while (x <= Math.abs(amount)) {
-		console.log("scrolling")
-		el.scrollBy(0, 10 * Math.sign(amount));
-		x +=10;
-	}
-}
-
-var scroll() = 
+});
 
 // LOAD
-
 window.onload = function() {
-	setTimeout(hideLogo, 3000);
-}
+	setTimeout(hideLogo, 2000);
+	detectBrowser();
+};
 
 // Particle
-
 particlesJS.load('particles-js', 'node_modules/particles/particlesjs-config.json', function() {
   console.log('callback - particles.js config loaded');
 });
 
 
-// Display Card
+// Hide the logo
 var hideLogo = function() {
 	var logo = document.getElementById('flying-logo');
 	logo.style.display = "none";
+	w = window.innerWidth;	
+};
+
+function detectBrowser() {
+	//alert(navigator.userAgent);
+	if ((navigator.userAgent.match(/Android/i) && navigator.userAgent.match(/Firefox/i))
+		|| navigator.userAgent.match(/Opera Mini/i)
+		|| (/Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor) && navigator.userAgent.match(/Mobile/i))
+		) { 
+		alert("Your experience may vary according to your current browser. Please use Chrome or Opera on your mobile.")
+	}
 }
-
-
-
-
 

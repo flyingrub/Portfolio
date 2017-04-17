@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+	<meta name="description" content="Ronan's Portfolio">
+	<meta name="author" content="flyingrub">
 	<title>Ronan</title>
 	<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> 
 	<script defer src="node_modules/vue/dist/vue.min.js"></script>
@@ -11,14 +13,14 @@
 </head>
 <body id="particles-js">
 	<header id="header">
-		<div v-on="click: goTo(0)" id="logo">RONAN</div>
-		<div v-on="click: goTo(1)" id="projects">PROJECTS</div>
-		<div v-on="click: goTo(0)" id="about">ABOUT</div>
+		<div v-on="click: goTo(0)" id="head-logo">RONAN</div>
+		<div v-on="click: goTo(1)" id="head-projects">PROJECTS</div>
+		<div v-on="click: goTo(0)" id="head-about">ABOUT</div>
 	</header>
 	<div id="all-frames" v-style="width: allFramesWidth + '%', transform: 'translate('+pos+'px,0px)'">
 		<main id="main-about" v-style="width: oneCardWidth + '%'" class="card about">
 			<section id="about">
-				<p>Hi ! I am Ronan, a french IT student.</br></br>I love creating and learning new things. Most of the software I code is Free as in beer and Freedom, and is available on my Github. I am also interested in design and UX.</br>I like music and abstract (mostly minimalistic) art.</br></br>You can find me on the followings websites. Or learn more about some of my projects on this website.</p>
+				<p>Hi ! I am Ronan, a french IT student.<br><br>I love creating and learning new things. Most of the software I code is Free as in beer and Freedom, and is available on my Github. I am also interested in design and UX.<br>I like music and abstract (mostly minimalistic) art.<br><br>You can find me on the followings websites. Or learn more about some of my projects on this website.</p>
 			</section>
 			<div class="vr"></div>
 			<section id="link">
@@ -37,7 +39,7 @@
 	        <hr/>
 	        <section class="section" id="content">
 				<template v-repeat="content in contents">
-					<p>{{ content.message }}</p></br>
+					<p>{{ content.message }}</p><br>
 				</template>
 				<a target="_blank" href="{{link}}">more...</a>
 	        </section>
@@ -53,5 +55,24 @@
 			</li>
 		</ul>
 	</footer>
+<<<<<<< HEAD
+=======
+<script src="main.js"></script>
+<!-- Piwik -->
+<script type="text/javascript">
+var _paq = _paq || [];
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+var u="//piwik.flyingrub.me/";
+_paq.push(['setTrackerUrl', u+'piwik.php']);
+_paq.push(['setSiteId', 2]);
+var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+})();
+</script>
+<noscript><p><img src="//piwik.flyingrub.me/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+>>>>>>> 0007941397084e4a9895a1f765939b58d7960654
 </body>
 </html>
