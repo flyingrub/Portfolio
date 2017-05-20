@@ -96,6 +96,7 @@ header {
   top: 0px;
   right: 0px;
   width: 100%;
+  font-family: "Merryweather Regular";
 }
 @media screen and (max-height: 800px) {
   /* line 21, ../sass/screen.scss */
@@ -109,7 +110,7 @@ header {
     height: 70px;
   }
 }
-/* line 37, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 header div {
   display: inline-block;
   vertical-align: middle;
@@ -125,7 +126,7 @@ header div {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 45, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 header #head-logo {
   float: left;
   font-size: 40px;
@@ -133,36 +134,35 @@ header #head-logo {
   font-family: "Merryweather Bold";
 }
 @media screen and (max-width: 1650px) {
-  /* line 45, ../sass/screen.scss */
+  /* line 46, ../sass/screen.scss */
   header #head-logo {
     margin-left: 150px;
   }
 }
 @media screen and (max-width: 1400px) {
-  /* line 45, ../sass/screen.scss */
+  /* line 46, ../sass/screen.scss */
   header #head-logo {
     margin-left: 100px;
   }
 }
 @media screen and (max-width: 1200px) {
-  /* line 45, ../sass/screen.scss */
+  /* line 46, ../sass/screen.scss */
   header #head-logo {
     margin-left: 75px;
   }
 }
 @media screen and (max-width: 700px) {
-  /* line 45, ../sass/screen.scss */
+  /* line 46, ../sass/screen.scss */
   header #head-logo {
     margin-left: 37.5px;
   }
 }
-/* line 68, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 header #head-about {
-  font-family: "Merryweather Regular";
   margin-right: 2em;
 }
 @media screen and (max-width: 500px) {
-  /* line 68, ../sass/screen.scss */
+  /* line 69, ../sass/screen.scss */
   header #head-about {
     display: none;
   }
