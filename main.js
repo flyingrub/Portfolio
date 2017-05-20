@@ -3,34 +3,34 @@ var currentCard = 0;
 var oldScroll = new Date();
 var canScroll = true;
 
-// SETUP DATA 
+// SETUP DATA
 var Data = {
 	projects: [
-		{ 
-			title: 'TamTime', 
-			contents: 
-				[ 
+		{
+			title: 'TamTime',
+			contents:
+				[
 					{ message: 'The aim of this project is to provide a better way to commute in the city of Montpellier. It provides an easy way to know the real and theoretical times of the next Bus/Tram of the TaM company.'},
 					{ message: 'I work mainly on the Android part of this project. Some of my friends work on the back-end handling the data we get from the bus company\'s API.'},
-					{ message: 'We even integrated it with our own server, in order to allow users to report events in the TaM network.'}
+					{ message: 'We integrated it with our own server, in order to allow users to report events in the TaM network.'}
 				],
 			link: 'https://github.com/flyingrub/TamTime'
 		},
 		{
-			title: 'Alea', 
-			contents: 
-				[ 
+			title: 'Alea',
+			contents:
+				[
 					{ message: 'I started this project because I like music and use Soundcloud a lot. A moment ago, I saw some some audio reactive websites, and I decided to create mine.'},
 					{ message: ' I had never worked with JavaScript before this project. I didn\'t have a lot experience with CSS either. That\'s why I decided to use the fewer libraries/framework as possible.'},
-					{ message: 'I don\'t even use the Soundcloud JavaScript libraries, because it uses flash. And I am pretty familiar with the soundcloud API so i rewrote my own one.'}
+					{ message: 'I don\'t use the Soundcloud JavaScript libraries, because it uses flash. And I am pretty familiar with the soundcloud API so i rewrote my own one.'}
 				],
 			link: 'http://alea.xyz/'
 		},
 		{
-			title: 'Secure Key', 
-			contents: 
-				[ 
-					{ message: 'I have a raspberry pi, and I sometimes leave it unused. But in my building the door is hard to unlock with the regular key.'},
+			title: 'Secure Key',
+			contents:
+				[
+					{ message: 'I have a raspberry pi and in my building the door is hard to unlock with the regular key.'},
 					{ message: 'I had the idea to use the wires from my intercom and connect them to my raspberry pi. Then I only needed to write a little websocket in Python and a client for Android.'},
 					{ message: ' Now, any of my friends who knows the code can download the app on the PlayStore, and open the front door of my building. It\'s secured with TLS, so no worries :).'}
 				],
@@ -171,7 +171,7 @@ window.addEventListener('touchend', function(e) {
 			return;
 		}
 		if(swipe_det.eX > swipe_det.sX) {
-			direc = "r"; 
+			direc = "r";
 			goToThisCard(currentCard -1);
 		} else {
 			direc = "l";
@@ -196,7 +196,7 @@ particlesJS.load('particles-js', 'node_modules/particles/particlesjs-config.json
 var hideLogo = function() {
 	var logo = document.getElementById('flying-logo');
 	logo.style.display = "none";
-	w = window.innerWidth;	
+	w = window.innerWidth;
 };
 
 function detectBrowser() {
@@ -204,7 +204,7 @@ function detectBrowser() {
 	if ((navigator.userAgent.match(/Android/i) && navigator.userAgent.match(/Firefox/i))
 		|| navigator.userAgent.match(/Opera Mini/i)
 		|| (/Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor) && navigator.userAgent.match(/Mobile/i))
-		) { 
+		) {
 		alert("Your experience may vary according to your current browser. Please use Chrome or Opera on your mobile.")
 	}
 }
