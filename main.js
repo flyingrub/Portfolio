@@ -183,7 +183,6 @@ window.addEventListener('touchend', function(e) {
 // LOAD
 window.onload = function() {
 	setTimeout(hideLogo, 2000);
-	detectBrowser();
 };
 
 // Particle
@@ -198,14 +197,4 @@ var hideLogo = function() {
 	logo.style.display = "none";
 	w = window.innerWidth;
 };
-
-function detectBrowser() {
-	//alert(navigator.userAgent);
-	if ((navigator.userAgent.match(/Android/i) && navigator.userAgent.match(/Firefox/i))
-		|| navigator.userAgent.match(/Opera Mini/i)
-		|| (/Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor) && navigator.userAgent.match(/Mobile/i))
-		) {
-		alert("Your experience may vary according to your current browser. Please use Chrome or Opera on your mobile.")
-	}
-}
 
