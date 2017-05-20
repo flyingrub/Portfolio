@@ -31,18 +31,18 @@
 				</ul>
 			</section>
 		</main>
-	    <main v-style="width: oneCardWidth + '%'" class ="card" v-repeat="projects">
-	        <section class="section" id="title">
-	            <h3>{{ title | uppercase }}</h3>
-	        </section>
-	        <hr/>
-	        <section class="section" id="content">
+		<main v-style="width: oneCardWidth + '%'" class ="card" v-repeat="projects">
+			<section class="section" id="title">
+				<h3>{{ title | uppercase }}</h3>
+			</section>
+			<hr/>
+			<section class="section" id="content">
 				<template v-repeat="content in contents">
 					<p>{{ content.message }}</p><br>
 				</template>
 				<a target="_blank" href="{{link}}">more...</a>
-	        </section>
-	    </main>
+			</section>
+		</main>
 	</div>
 	<div id="flying-logo"></div>
 	<footer id="footer">

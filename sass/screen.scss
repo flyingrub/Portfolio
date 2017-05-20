@@ -292,7 +292,7 @@ main {
 
 	hr {
 		height: 2px;
-		background-color: lighten($dark-color, 35%);
+		background-color: $hr;
 		margin-top: 50px;
 		margin-bottom: 50px;
 		margin-right: 15%;
@@ -353,7 +353,7 @@ main {
 		@include flex(1 0);
 		max-width: 2px;
 		height: 30vw;
-		background-color: darken($white-color, 25%);
+		background-color: $vr;
 
 		@media screen and (max-width: 1050px), screen and (max-height: 650px) {
 			display: none;
