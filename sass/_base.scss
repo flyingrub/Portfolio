@@ -6,7 +6,10 @@ $dark-color: #121212;
 @import "compass/css3";
 @import "compass/layout/stretching";
 @import "compass/layout.scss";
-@import url(https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Raleway|Playfair+Display);
+
+@include font-face("Merryweather", font-files("Merriweather-Bold.ttf"));
+
+@include font-face("Noto", font-files("NotoSans-Regular.ttf"));
 
 @mixin vertical-align {
 	position: relative;

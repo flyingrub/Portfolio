@@ -36,17 +36,17 @@ header {
 	div {
 		@include inline-block(middle);
 		@include float-right;
-		font-family: "Roboto";
+		font-family: "Noto";
 		font-size: 20px;
 		cursor: pointer;
 		@include vertical-align;
 	}
-	
+
 	#head-logo {
 		@include float-left;
 		font-size: 40px;
 		margin-left: $margin-header;
-		font-family: "Playfair Display";
+		font-family: "Merryweather";
 
 		@media screen and (max-width: 1650px) {
 			margin-left: $margin-header /2;
@@ -232,10 +232,10 @@ main {
 		}
 
 	}
-	
+
 	#title {
 		font-weight: bold;
-		font-family: "Raleway";
+		font-family: "Noto";
 		margin-top: 50px;
 
 		h3 {
@@ -255,7 +255,7 @@ main {
 	}
 
 	#content {
-		font-family: "Open Sans";
+		font-family: "Noto";
 		font-size: 23px;
 		text-align: justify;
 		text-justify: inter-word;
@@ -322,12 +322,12 @@ main {
 		height: 100%;
 		box-sizing: border-box;
 		padding: 5em;
-		font-family: "Open Sans";
+		font-family: "Noto";
 		font-size: 26px;
 		text-align: justify;
 		text-justify: inter-word;
 		line-height: 1.5em;
-		
+
 		p {
 			@media screen and (min-width: 1050px) and (min-height: 650px) {
 				@include vertical-align;
@@ -375,7 +375,7 @@ main {
 		text-align: center;
 		box-sizing: border-box;
 		max-width: $link-width;
-		font-family: "Playfair Display";
+		font-family: "Merryweather";
 		font-size: 30px;
 		line-height: 2em;
 
