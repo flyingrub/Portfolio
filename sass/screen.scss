@@ -47,7 +47,6 @@ header {
 		@include float-left;
 		font-size: 40px;
 		margin-left: $margin-header;
-		font-family: "Merryweather Bold";
 
 		@media screen and (max-width: 1650px) {
 			margin-left: $margin-header /2;
@@ -376,7 +375,7 @@ main {
 		text-align: center;
 		box-sizing: border-box;
 		max-width: $link-width;
-		font-family: "Merryweather Regular";
+		font-family: "Merryweather Light";
 		font-size: 30px;
 		line-height: 2em;
 
