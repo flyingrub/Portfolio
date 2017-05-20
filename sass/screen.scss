@@ -25,6 +25,7 @@ header {
 	top: 0px;
 	right: 0px;
 	width: 100%;
+	font-family: "Merryweather Regular";
 
 	@media screen and (max-height: 800px) {
 		height: $header-height * 0.8;
@@ -66,7 +67,6 @@ header {
 	}
 
 	#head-about {
-		font-family: "Merryweather Regular";
 		margin-right: 2em;
 
 		@media screen and (max-width: 500px) {
