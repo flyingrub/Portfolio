@@ -7,8 +7,8 @@ $dark-color: #121212;
 @import "compass/layout/stretching";
 @import "compass/layout.scss";
 
-@include font-face("Merryweather", font-files("Merriweather-Bold.ttf"));
-
+@include font-face("Merryweather Bold", font-files("Merriweather-Bold.ttf"));
+@include font-face("Merryweather Regular", font-files("Merriweather-Regular.ttf"));
 @include font-face("Noto", font-files("NotoSans-Regular.ttf"));
 
 @mixin vertical-align {

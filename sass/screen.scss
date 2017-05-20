@@ -15,6 +15,7 @@ html, body {
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
+	font-family: "Noto";
 }
 
 header {
@@ -36,7 +37,6 @@ header {
 	div {
 		@include inline-block(middle);
 		@include float-right;
-		font-family: "Noto";
 		font-size: 20px;
 		cursor: pointer;
 		@include vertical-align;
@@ -46,7 +46,7 @@ header {
 		@include float-left;
 		font-size: 40px;
 		margin-left: $margin-header;
-		font-family: "Merryweather";
+		font-family: "Merryweather Bold";
 
 		@media screen and (max-width: 1650px) {
 			margin-left: $margin-header /2;
@@ -66,6 +66,7 @@ header {
 	}
 
 	#head-about {
+		font-family: "Merryweather Regular";
 		margin-right: 2em;
 
 		@media screen and (max-width: 500px) {
@@ -375,7 +376,7 @@ main {
 		text-align: center;
 		box-sizing: border-box;
 		max-width: $link-width;
-		font-family: "Merryweather";
+		font-family: "Merryweather Regular";
 		font-size: 30px;
 		line-height: 2em;
 
