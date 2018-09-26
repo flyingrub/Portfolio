@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "flyingrub's portfolio.",
   "main": "index.js",
-  "private": "true",
+  "private": true,
   "dependencies": {
     "vue": "^0.12.16"
   },

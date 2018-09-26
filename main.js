@@ -11,8 +11,8 @@ var Data = {
 			contents:
 				[
 					{ message: 'The aim of this project is to provide a better way to commute in the city of Montpellier. It provides an easy way to know the real and theoretical times of the next Bus/Tram of the TaM company.'},
-					{ message: 'I work mainly on the Android part of this project. Some of my friends work on the back-end handling the data we get from the bus company\'s API.'},
-					{ message: 'We integrated it with our own server, in order to allow users to report events in the TaM network.'}
+					{ message: 'It involve creating an Android app that allow to display those shedules. The API is undocumented so I needed to reverse it by listening to the traffic of the official app. I also decompiled it.'},
+					{ message: 'Moreover, I created a server written in python that allows users to report events in the TaM network.'}
 				],
 			link: 'https://github.com/flyingrub/TamTime'
 		},
@@ -21,7 +21,7 @@ var Data = {
 			contents:
 				[
 					{ message: 'I started this project because I like music and use Soundcloud a lot. A moment ago, I saw some some audio reactive websites, and I decided to create mine.'},
-					{ message: ' I had never worked with JavaScript before this project. I didn\'t have a lot experience with CSS either. That\'s why I decided to use the fewer libraries/framework as possible.'},
+					{ message: 'I had never worked with JavaScript before this project. I didn\'t have a lot experience with CSS either. That\'s why I decided to use the fewer libraries/framework as possible.'},
 					{ message: 'I don\'t use the Soundcloud JavaScript libraries, because it uses flash. And I am pretty familiar with the soundcloud API so i rewrote my own one.'}
 				],
 			link: 'http://alea.xyz/'
@@ -32,9 +32,29 @@ var Data = {
 				[
 					{ message: 'I have a raspberry pi and in my building the door is hard to unlock with the regular key.'},
 					{ message: 'I had the idea to use the wires from my intercom and connect them to my raspberry pi. Then I only needed to write a little websocket in Python and a client for Android.'},
-					{ message: ' Now, any of my friends who knows the code can download the app on the PlayStore, and open the front door of my building. It\'s secured with TLS, so no worries :).'}
+					{ message: 'Now, any of my friends who knows the code can download the app on the PlayStore, and open the front door of my building. It\'s secured with TLS, so no worries :).'}
 				],
 			link: 'https://github.com/flyingrub/SecureKey'
+		},
+		{
+			title: 'Joy Division',
+			contents:
+				[
+					{ message: 'This project is born after I read about Perlin noise and wanted to try to build something with P5.js.' },
+					{ message: 'I have also always been fascinated by the artwork of the album Unknow pleasure of Joy Division that represent an image of radio waves from pulsar CP 1919.' },
+					{ message: 'I thought it would be a great exercice to try to recreate an image that look like those radio waves. Each time you reload or click on the page a new one is created.' }
+				],
+			link: 'https://flyingrub.github.io/Joy-Division/'
+		},
+		{
+			title: 'Audio Spectrum',
+			contents:
+				[
+					{ message: 'I had already played with the WebAudio API with Alea.xyz, but was not entirely satisfied with the way I processed the frequential spectrum.' },
+					{ message: 'I had no idea of what the data depicted exactly, just that the bass was at the start and the high at the end of the array representing the frequential spectrum.'},
+					{ message: 'That\s why I decided to create this project. I wanted to know what frequency was represented and also display those in a logarithmic scale, as we percieve it.'}
+				],
+			link: 'https://flyingrub.github.io/AudioSpectrum/'
 		}
 	],
 	pos: 0
