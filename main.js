@@ -10,8 +10,8 @@ var Data = {
 			title: 'TamTime',
 			contents:
 				[
-					{ message: 'The aim of this project is to provide a better way to commute in the city of Montpellier. It provides an easy way to know the real and theoretical times of the next Bus/Tram of the TaM company.'},
-					{ message: 'It involve creating an Android app that allow to display those shedules. The API is undocumented so I needed to reverse it by listening to the traffic of the official app. I also decompiled it.'},
+					{ message: 'The purpose of this project is to provide a better way to commute in the city of Montpellier. It provides an easy way to know the real and theoretical times of the next Bus/Tram of the TaM company.'},
+					{ message: 'It involve creating an Android app that allows to display those shedules. The API is undocumented so I needed to reverse it by listening to the traffic of the official app. I also decompiled it.'},
 					{ message: 'Moreover, I created a server written in python that allows users to report events in the TaM network.'}
 				],
 			link: 'https://github.com/flyingrub/TamTime'
@@ -20,9 +20,9 @@ var Data = {
 			title: 'Alea',
 			contents:
 				[
-					{ message: 'I started this project because I like music and use Soundcloud a lot. A moment ago, I saw some some audio reactive websites, and I decided to create mine.'},
-					{ message: 'I had never worked with JavaScript before this project. I didn\'t have a lot experience with CSS either. That\'s why I decided to use the fewer libraries/framework as possible.'},
-					{ message: 'I don\'t use the Soundcloud JavaScript libraries, because it uses flash. And I am pretty familiar with the soundcloud API so i rewrote my own one.'}
+					{ message: 'I started this project because I like music and use SoundCloud a lot. Some time ago, I saw some some audio reactive websites, and I decided to create mine.'},
+					{ message: 'I had never worked with Javascript before this project. I "didn\'t have a lot experience with CSS either. That\'s why I decided to use the fewer libraries/framework as possible.'},
+					{ message: 'I don\'t use the SoundCloud Javascript libraries, because it uses flash. And I am pretty familiar with the SoundCloud API so I rewrote my own.'}
 				],
 			link: 'http://alea.xyz/'
 		},
@@ -30,9 +30,9 @@ var Data = {
 			title: 'Secure Key',
 			contents:
 				[
-					{ message: 'I have a raspberry pi and in my building the door is hard to unlock with the regular key.'},
+					{ message: 'I have a Raspberry Pi and in my building the door is hard to unlock with the regular key.'},
 					{ message: 'I had the idea to use the wires from my intercom and connect them to my raspberry pi. Then I only needed to write a little websocket in Python and a client for Android.'},
-					{ message: 'Now, any of my friends who knows the code can download the app on the PlayStore, and open the front door of my building. It\'s secured with TLS, so no worries :).'}
+					{ message: 'Now, any of my friends who knows the code can download the app on the Play Store, and open the front door of my building. It\'s secured with TLS, so no worries. :)'}
 				],
 			link: 'https://github.com/flyingrub/SecureKey'
 		},
