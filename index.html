@@ -40,7 +40,8 @@
 				<template v-repeat="content in contents">
 					<p>{{ content.message }}</p><br>
 				</template>
-				<a target="_blank" href="{{link}}">more...</a>
+				<a id="more" target="_blank" href="{{link}}">Go to this project page</a>
+				<a id="next" target="_blank" v-on="click: goToNext()">Go to Next project</a>
 			</section>
 		</main>
 	</div>

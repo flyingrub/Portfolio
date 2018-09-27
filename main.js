@@ -50,9 +50,9 @@ var Data = {
 			title: 'Audio Spectrum',
 			contents:
 				[
-					{ message: 'I had already played with the WebAudio API with Alea.xyz, but was not entirely satisfied with the way I processed the frequential spectrum.' },
-					{ message: 'I had no idea of what the data depicted exactly, just that the bass was at the start and the high at the end of the array representing the frequential spectrum.'},
-					{ message: 'That\s why I decided to create this project. I wanted to know what frequency was represented and also display those in a logarithmic scale, as we percieve it.'}
+					{ message: 'I had already played with the WebAudio API with Alea.xyz, but was not entirely satisfied with the way I processed the frequency spectrum.' },
+					{ message: 'I had no idea of what the data depicted exactly, just that the bass was at the start and the high at the end of the array representing the frequency spectrum.'},
+					{ message: 'That\s why I decided to create this project. I wanted to know what frequency was represented and also display those in a logarithmic scale, as we perceive it.'}
 				],
 			link: 'https://flyingrub.github.io/AudioSpectrum/'
 		}
@@ -81,7 +81,10 @@ var goToThisCard = function(pos) {
 
 var allCards = new Vue({
 	el: '#all-frames',
-	data: Data
+	data: Data,
+	methods: {
+		goToNext: () => goToThisCard(currentCard+1)
+	}
 });
 
 var footer = new Vue({

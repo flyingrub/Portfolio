@@ -281,11 +281,16 @@ main {
 			font-size: 20px;
 		}
 
+		#next {
+			float: right;
+		}
+
 		a {
 			outline: none;
-			float: right;
 			font-size: 16px;
+			float: left;
 			color:inherit;
+			font-family: "Courier New", Courier, monospace;
 			text-decoration: none;
 			cursor: pointer;
 
