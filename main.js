@@ -11,7 +11,7 @@ var Data = {
 			contents:
 				[
 					{ message: 'The purpose of this project is to provide a better way to commute in the city of Montpellier. It provides an easy way to know the real and theoretical times of the next Bus/Tram of the TaM company.'},
-					{ message: 'It involve creating an Android app that allows to display those shedules. The API is undocumented so I needed to reverse it by listening to the traffic of the official app. I also decompiled it.'},
+					{ message: 'It involves creating an Android app that allows to display those shedules. The API is undocumented so I needed to reverse it by listening to the traffic of the official app. I also decompiled it.'},
 					{ message: 'Moreover, I created a server written in python that allows users to report events in the TaM network.'}
 				],
 			link: 'https://github.com/flyingrub/TamTime'
@@ -21,10 +21,30 @@ var Data = {
 			contents:
 				[
 					{ message: 'I started this project because I like music and use SoundCloud a lot. Some time ago, I saw some some audio reactive websites, and I decided to create mine.'},
-					{ message: 'I had never worked with Javascript before this project. I "didn\'t have a lot experience with CSS either. That\'s why I decided to use the fewer libraries/framework as possible.'},
-					{ message: 'I don\'t use the SoundCloud Javascript libraries, because it uses flash. And I am pretty familiar with the SoundCloud API so I rewrote my own.'}
+					{ message: 'I had never worked with Javascript before this project. I didn\'t have a lot experience with CSS either. That\'s why I decided to use the least libraries/framework possible.'},
+					{ message: 'I didn\'t use the SoundCloud Javascript library, because it uses flash. And I am pretty familiar with the SoundCloud API so I rewrote my own.'}
 				],
 			link: 'http://alea.xyz/'
+		},
+		{
+			title: 'Joy Division',
+			contents:
+				[
+					{ message: 'This project is born after I read about Perlin noise and wanted to try to build something with P5.js.' },
+					{ message: 'I have also always been fascinated by the artwork of the album Unknow Pleasures by Joy Division that represent an image of radio waves from pulsar CP 1919.' },
+					{ message: 'I thought it would be a great exercice to try to recreate an image that look like those radio waves. Each time you reload or click on the page a new one is created.' }
+				],
+			link: 'https://flyingrub.github.io/Joy-Division/'
+		},
+		{
+			title: 'Audio Spectrum',
+			contents:
+				[
+					{ message: 'I had already played with the WebAudio API with Alea.xyz, but was not entirely satisfied with the way I processed the frequency spectrum.' },
+					{ message: 'I had no idea what the data depicted exactly, just that the bass was at the start and the high at the end of the array representing the frequency spectrum.'},
+					{ message: 'That\s why I decided to create this project. I wanted to know what frequency was represented and also display those in a logarithmic scale, as we perceive it.'}
+				],
+			link: 'https://flyingrub.github.io/AudioSpectrum/'
 		},
 		{
 			title: 'Secure Key',
@@ -35,26 +55,6 @@ var Data = {
 					{ message: 'Now, any of my friends who knows the code can download the app on the Play Store, and open the front door of my building. It\'s secured with TLS, so no worries. :)'}
 				],
 			link: 'https://github.com/flyingrub/SecureKey'
-		},
-		{
-			title: 'Joy Division',
-			contents:
-				[
-					{ message: 'This project is born after I read about Perlin noise and wanted to try to build something with P5.js.' },
-					{ message: 'I have also always been fascinated by the artwork of the album Unknow pleasure of Joy Division that represent an image of radio waves from pulsar CP 1919.' },
-					{ message: 'I thought it would be a great exercice to try to recreate an image that look like those radio waves. Each time you reload or click on the page a new one is created.' }
-				],
-			link: 'https://flyingrub.github.io/Joy-Division/'
-		},
-		{
-			title: 'Audio Spectrum',
-			contents:
-				[
-					{ message: 'I had already played with the WebAudio API with Alea.xyz, but was not entirely satisfied with the way I processed the frequency spectrum.' },
-					{ message: 'I had no idea of what the data depicted exactly, just that the bass was at the start and the high at the end of the array representing the frequency spectrum.'},
-					{ message: 'That\s why I decided to create this project. I wanted to know what frequency was represented and also display those in a logarithmic scale, as we perceive it.'}
-				],
-			link: 'https://flyingrub.github.io/AudioSpectrum/'
 		}
 	],
 	pos: 0

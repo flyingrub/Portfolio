@@ -192,6 +192,10 @@ main {
 	margin-left: $margin-header;
 	color: white;
 
+	&:last-child #next {
+		display: none;
+	}
+
 	@media screen and (max-width: 1650px) {
 		margin-right: $margin-header /2;
 		margin-left: $margin-header /2;
