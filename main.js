@@ -208,12 +208,6 @@ window.onload = function() {
 	setTimeout(hideLogo, 2000);
 };
 
-// Particle
-particlesJS.load('particles-js', 'node_modules/particles/particlesjs-config.json', function() {
-  console.log('callback - particles.js config loaded');
-});
-
-
 // Hide the logo
 var hideLogo = function() {
 	var logo = document.getElementById('flying-logo');
