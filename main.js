@@ -17,16 +17,6 @@ var Data = {
 			link: 'http://alea.xyz/'
 		},
 		{
-			title: 'Joy Division',
-			contents:
-				[
-					{ message: 'This project is born after I read about Perlin noise and wanted to try to build something with P5.js.' },
-					{ message: 'I have also always been fascinated by the artwork of the album Unknow Pleasures by Joy Division that represent an image of radio waves from pulsar CP 1919.' },
-					{ message: 'I thought it would be a great exercice to try to recreate an image that look like those radio waves. Each time you reload or click on the page a new one is created.' }
-				],
-			link: 'https://flyingrub.github.io/Joy-Division/'
-		},
-		{
 			title: 'Audio Spectrum',
 			contents:
 				[
@@ -65,6 +55,16 @@ var Data = {
 				{ message: 'I also created a few plugins while working there, in order to test my modifications and learn more about OpenGL.'}
 			],
 		link: 'https://github.com/flyingrub/ffgl'
+		},
+		{
+			title: 'Qualia',
+			contents:
+			[
+				{ message: 'This is a school project that uses Unity, FMod Studio and the Leapmotion. The soundtrack is also created by me and is (CC BY-SA 2.0).'},
+				{ message: 'All cubes represent one audio track in FmodStudio and it\'s graphical property are modified by the current volume of the track associated to it.'},
+				{ message: 'The idea was to recreate a colorful vectorial world reactive to the sound.'}
+			],
+		link: 'https://github.com/flyingrub/Qualia'
 		},
 		{
 			title: 'Secure Key',
