@@ -60,9 +60,9 @@ var Data = {
 			title: 'FFGL Plugins',
 			contents:
 			[
-				{ message: 'As an Intern at Resolume, a company providing software for VJ, I did work on improving the FreeFrameGL protocol. I fixed old bugs, added some functionnalities to the protocol and created a little framework to ease the creation of plugin.'},
-				{ message: 'This protocol allow an application to host plugin in order to extend its capabilities, providing new visual effects.'},
-				{ message: 'I created a few plugins while working there, in order to test my modifications and learn more about OpenGL.'}
+				{ message: 'As an Intern at Resolume, a company providing software for VJ, I did work on improving the FreeFrameGL protocol. This protocol allow an application to host plugin in order to extend its capabilities, providing new visual effects.'},
+				{ message: 'My work involved fixing old bugs, adding some functionnalities to the protocol and creating a little framework to ease the creation of plugin.'},
+				{ message: 'I also created a few plugins while working there, in order to test my modifications and learn more about OpenGL.'}
 			],
 		link: 'https://github.com/flyingrub/ffgl'
 		},
