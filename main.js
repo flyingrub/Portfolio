@@ -7,16 +7,6 @@ var canScroll = true;
 var Data = {
 	projects: [
 		{
-			title: 'TamTime',
-			contents:
-				[
-					{ message: 'The purpose of this project is to provide a better way to commute in the city of Montpellier. It provides an easy way to know the real and theoretical times of the next Bus/Tram of the TaM company.'},
-					{ message: 'It involves creating an Android app that allows to display those shedules. The API is undocumented so I needed to reverse it by listening to the traffic of the official app. I also decompiled it.'},
-					{ message: 'Moreover, I created a server written in python that allows users to report events in the TaM network.'}
-				],
-			link: 'https://github.com/flyingrub/TamTime'
-		},
-		{
 			title: 'Alea',
 			contents:
 				[
@@ -47,6 +37,36 @@ var Data = {
 			link: 'https://flyingrub.github.io/AudioSpectrum/'
 		},
 		{
+			title: 'Redux VST',
+			contents:
+			[
+				{ message: 'I recently bought Bitwig because I wanted to be able to make music on Linux and love the modular environment they provide.'},
+				{ message: 'But I was missing Redux, a plugin I was use to use on Ableton. And I thought it could be fun to recreate it as my first VST.'},
+				{ message: 'It is a fairly simple VST and I already had the idea on how to implement it. The hardest part is to get it to work on Linux.'}
+			],
+		link: 'https://github.com/flyingrub/Redux'
+		},
+		{
+			title: 'Creative JS',
+			contents:
+			[
+				{ message: 'I saw a friend\'s drawing on social media and I was wondering if I could achieve to recreate something similar using code.'},
+				{ message: 'This website is now holding this attempt and others experiments.'},
+				{ message: 'I also managed to create controlled random noise in order to create a perfect gif loop on the Circles experiment.'}
+			],
+		link: 'https://flyingrub.github.io/creative-js/'
+		},
+		{
+			title: 'FFGL Plugin',
+			contents:
+			[
+				{ message: 'As an Intern at Resolume, a company providing software for VJ, I did work on improving the FreeFrameGL protocol.'},
+				{ message: 'This protocol allow an application to host plugin in order to extend its capabilities, providing new visual effects.'},
+				{ message: 'I created a few plugins while working there, in order to test my modifications and learn more about OpenGL.'}
+			],
+		link: 'https://github.com/flyingrub/ffgl'
+		},
+		{
 			title: 'Secure Key',
 			contents:
 				[
@@ -55,7 +75,17 @@ var Data = {
 					{ message: 'Now, any of my friends who knows the code can download the app on the Play Store, and open the front door of my building. It\'s secured with TLS, so no worries. :)'}
 				],
 			link: 'https://github.com/flyingrub/SecureKey'
-		}
+		},
+		{
+			title: 'TamTime',
+			contents:
+				[
+					{ message: 'The purpose of this project is to provide a better way to commute in the city of Montpellier. It provides an easy way to know the real and theoretical times of the next Bus/Tram of the TaM company.'},
+					{ message: 'It involves creating an Android app that allows to display those shedules. The API is undocumented so I needed to reverse it by listening to the traffic of the official app. I also decompiled it.'},
+					{ message: 'Moreover, I created a server written in python that allows users to report events in the TaM network.'}
+				],
+			link: 'https://github.com/flyingrub/TamTime'
+		},
 	],
 	pos: 0
 };
